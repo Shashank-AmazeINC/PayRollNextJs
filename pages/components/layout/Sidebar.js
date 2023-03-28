@@ -23,7 +23,7 @@ function SideBar
                 <Sidebar className={dashStyle.sidenav}>
                     <Menu >
                         <MenuItem icon={<AiOutlineHome color='blue' />}>  <Link href="/dash" className={dashStyle.dashLink}> HOME</Link></MenuItem>
-                        <MenuItem icon={<MdOutlinePeopleAlt color='blue' />}>  <Link href="/Staff" className={dashStyle.dashLink}> STAFF</Link></MenuItem>
+                        <MenuItem icon={<MdOutlinePeopleAlt color='blue' />}>  <Link href="/components/layout/AddressDetailsWizard" className={dashStyle.dashLink}> STAFF</Link></MenuItem>
                         <SubMenu icon={<FcCalendar color='blue' />} label=" ATTENDANCE" >
 
                             <MenuItem className={dashStyle.Menu} icon={<FcCalendar color='blue' />} > <Link href="/components/layout/AttendenceDetails" className={dashStyle.dashLink}>  ATTENDANCE DETAILS</Link>  </MenuItem>
