@@ -25,15 +25,15 @@ function PayperiodSettingsDash() {
                 <table className='table table-hover mt-2 '>
                     <thead className='bg-info text-white '>
                         <tr>
-                            <td>Pay Code</td>
-                            <td>Pay Period</td>
-                            <td>Attendance Coverage Startdate</td>
-                            <td>Attendance Coverage Enddate</td>
-                            <td>Payroll Start date</td>
-                            <td>Payroll End date</td>
-                            <td>Payroll Run Type</td>
-                            <td>Comments</td>
-                            <td>Actions</td>
+                            <th>Pay Code</th>
+                            <th>Pay Period</th>
+                            <th>Attendance Coverage Startdate</th>
+                            <th>Attendance Coverage Enddate</th>
+                            <th>Payroll Start date</th>
+                            <th>Payroll End date</th>
+                            <th>Payroll Run Type</th>
+                            <th>Comments</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                 </table>
