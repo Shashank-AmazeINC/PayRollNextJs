@@ -20,6 +20,19 @@
     "react-icons": "^4.8.0",
     "react-live-clock": "^6.1.13",
     "react-pro-sidebar": "^1.0.0",
-    "react-step-wizard": "^5.3.11"
+    "react-step-wizard": "^5.3.11",
+    "react-bootstrap-sweetalert": "^5.2.0",
+    
+    "react-export-table-to-excel": "^1.0.6",
+    "react-hook-form": "^7.43.7",
+   
+   
+    
+    "reactstrap": "^9.1.6",
+    "resolver": "^0.1.12",
+    "resolvers": "^1.0.0",
+    "sweetalert2": "^11.7.3",
+    "yup": "^1.0.2"
+
   }
 }
