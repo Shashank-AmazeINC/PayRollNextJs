@@ -8,7 +8,7 @@ import { GiStairsGoal } from 'react-icons/gi';
 import { FcCalendar } from 'react-icons/fc';
 import { FaHandsHelping } from 'react-icons/fa';
 import { FcCustomerSupport } from 'react-icons/fc';
-import dashStyle from '../../../styles/Sidebar.module.css'
+import dashStyle from '../styles/Sidebar.module.css'
 import { Sidebar, Menu, MenuItem, SubMenu, ProSidebarProvider } from 'react-pro-sidebar';
 import dynamic from 'next/dynamic';
 import { TbReportSearch } from 'react-icons/tb';

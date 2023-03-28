@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../../../public/Logo_digiOffice_White.png'
-import bell from '../../../public/notification.png'
-import HeaderStyle from '../../../styles/Header.module.css'
+import logo from '../public/Logo_digiOffice_White.png'
+import bell from '../public/notification.png'
+import HeaderStyle from '../styles/Header.module.css'
 import Clock from 'react-live-clock'
 import dynamic from 'next/dynamic'
 function Header() {
