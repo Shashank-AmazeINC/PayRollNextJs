@@ -1,0 +1,37 @@
+.sidenav {
+    height: 88vh;
+    font: bolder;
+    background: rgb(255, 255, 255);
+    color: #949393;
+    font-size: 13px;
+    display: block;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space:normal;
+}
+
+.Menu {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    font-family: Georgia, serif;white-space: normal;
+}
+.MenuItem{
+font-size: 10px;white-space: normal;
+}
+
+.dashLink {
+    text-decoration: none;
+    font: bolder;
+    background: rgb(255, 255, 255);
+    color: #949393;
+    font-size: 13px;
+    display: block;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: normal;
+}
