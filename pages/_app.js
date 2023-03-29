@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
           </div>
           <div className='col-10'>
             <Component {...pageProps} />
-            <Footer/>
+           
           </div>
          
         </div>
