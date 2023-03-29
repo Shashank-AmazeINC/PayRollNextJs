@@ -11,8 +11,7 @@ import * as Yup from 'yup';
   function ComponentMappingForm() {
       return (
         
-          <div className="container-fluid">
-            
+          <div className="container">
             <div className="row">
               <div className="col-lg-4">
                 <h3 className="Heading">Component Mapping</h3>
