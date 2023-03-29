@@ -9,7 +9,7 @@ function Header() {
     return (
         <div>
 
-            <div id={HeaderStyle.header} className='row'>
+            <div id={HeaderStyle.header} className='row' >
                 <div className='col-2'>
                     <Image
                         src={logo}
