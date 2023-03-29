@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import Styles from "../styles/employmentJobHistory.module.css";
-
+import Link from 'next/link';
 function PositionMasterDetails() {
        // form validation rules 
        const validationSchema = Yup.object().shape({
@@ -72,7 +72,7 @@ function PositionMasterDetails() {
                                 <div className="col-lg-7">
                                 </div>
                                 <div className="col-lg-2">
-                                    <button   id={Styles.actionBtn} tabindex="0">CANCEL</button>
+                                   <Link href="/PositionMasterDash"> <button   id={Styles.actionBtn} tabindex="0">CANCEL</button></Link>
                                 </div>
                                 <div className="col-lg-2">
                                     <button  id={Styles.actionBtn}>SUBMIT</button>

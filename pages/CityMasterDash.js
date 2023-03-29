@@ -1,6 +1,8 @@
 import React from 'react'
 import citymaster from '../styles/CityMasterDashboard.module.css'
-function CityMasterDash() {
+import Link from 'next/link'
+function CityMasterDash()
+ {
     return (
         <div>
 
@@ -41,8 +43,8 @@ function CityMasterDash() {
                     </span>RESULTS</p>
                 </div>
                 <div className="col-md-2">
-                    <button className={citymaster.button} tabindex="0">
-                        Add New</button>
+                    <Link href="/CityMasterForm"><button className={citymaster.button} tabindex="0">
+                        Add New</button></Link>
                 </div>
             </div>
             <br />
