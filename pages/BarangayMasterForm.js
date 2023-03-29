@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { basePath } from '@/next.config';
+import Link from 'next/link';
 function BarangayMasterForm() {
     const Swal = require('sweetalert2')
     Swal.bindClickHandler()
@@ -99,7 +100,7 @@ Swal.mixin({
                         <div className="col-lg-8">
                         </div>
                         <div className="col-lg-2">
-                            <button className={Barangay.button}>CANCEL</button>
+                            <Link href="/BarangayMasterDash"><button className={Barangay.button}>CANCEL</button></Link>
                         </div>
                         <div className="col-lg-2">
                         

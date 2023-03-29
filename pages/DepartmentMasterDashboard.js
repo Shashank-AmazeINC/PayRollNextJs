@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Styles from "../styles/employmentJobHistory.module.css";
+import Link from "next/link";
 function DepartmentMasterDashboard(){
     return (
         <div>
@@ -32,14 +33,14 @@ function DepartmentMasterDashboard(){
             <div className="col-lg-2">
 
 
-<button
+<Link href="/DepartmentMasterForm"><button
 className="btn btn-primary btn-sm shadow-lg"
 id={Styles.addNew}
 onClick={() => setModalOpen(!modalOpen)}
 >
 {/* <AiOutlinePlusCircle /> */}
 ADD new
-</button>
+</button></Link>
 
 </div>
 </div>

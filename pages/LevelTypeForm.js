@@ -3,7 +3,7 @@ import Styles from "../styles/LevelTypeForm.module.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-
+import Link from "next/link";
 function LevelTypeForm(){
     const validationSchema = Yup.object().shape({
         LevelType: Yup.string().required('Level Type is required').min(3,'Level Type must be atleast 3 characters'),
@@ -52,7 +52,7 @@ function LevelTypeForm(){
             <div className="row ">
               <div className="col-lg-8"></div>
               <div className="col-lg-4">
-                <button id={Styles.btn} onClick={() => reset()}>Cancel</button>
+               <Link href="/LevelTypeDash"> <button id={Styles.btn} onClick={() => reset()}>Cancel</button></Link>
                 <button id={Styles.btn} type="submit">Submit</button>
               </div>
             </div>

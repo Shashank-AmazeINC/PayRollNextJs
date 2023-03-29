@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import subsectionform from '../styles/SubSectionMasterForm.module.css'
+import Link from 'next/link';
 function SubSectionMasterForm() {
        // form validation rules 
        const validationSchema = Yup.object().shape({
@@ -70,7 +71,7 @@ function SubSectionMasterForm() {
                                 <div className="col-lg-7">
                                 </div>
                                 <div className="col-lg-2">
-                                    <button  className={subsectionform.button} >CANCEL</button>
+                                   <Link href="/SubSectionMaster"> <button  className={subsectionform.button} >CANCEL</button></Link>
                                 </div>
                                 <div className="col-lg-2">
                                     <button className={subsectionform.button}>SUBMIT</button>

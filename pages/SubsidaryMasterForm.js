@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import subsidaryform from '../styles/SubsidaryMasterForm.module.css'
+import Link from 'next/link';
 function SubsidaryMasterForm() {
       // form validation rules 
       const validationSchema = Yup.object().shape({
@@ -67,7 +68,7 @@ function SubsidaryMasterForm() {
                         <div className="col-lg-7">
                         </div>
                         <div className="col-lg-2">
-                            <button className={subsidaryform.button}>CANCEL</button>
+                           <Link href="/SubsidaryMasterDash"> <button className={subsidaryform.button}>CANCEL</button></Link>
                         </div>
                         <div className="col-lg-2"><button className={subsidaryform.button}>SUBMIT</button>
                         </div>

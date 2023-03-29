@@ -3,7 +3,7 @@ import { BiFilterAlt } from "react-icons/bi";
 import Styles from "../styles/PositionMasterDash.module.css";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import table from "../styles/table.module.css";
-
+import Link from "next/link";
 function SupportTicketDashboard() {
   return (
     <div>
@@ -16,14 +16,14 @@ function SupportTicketDashboard() {
           </div>
           <div className="col-lg-2"></div>
           <div className="col-lg-2">
-            <button
+            <Link href="/SupportTickets"><button
               className="btn btn-primary btn-sm  shadow-lg"
               id={Styles.addNew}
             >
               {" "}
               <AiOutlinePlusCircle />
               Add
-            </button>
+            </button></Link>
           </div>
         </div>
         <br></br>

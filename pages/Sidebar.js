@@ -31,21 +31,21 @@ function SideBar
 
                             </SubMenu>
                             <SubMenu icon={<MdCoPresent color='blue' />} label="LOANS">
-                                <MenuItem icon={<MdCoPresent color='blue' />}> <Link href="/loan upload" className={dashStyle.dashLink}> LOANS UPLOAD</Link></MenuItem>
+                                <MenuItem icon={<MdCoPresent color='blue' />}> <Link href="/TeamLoans" className={dashStyle.dashLink}> LOANS UPLOAD</Link></MenuItem>
                             </SubMenu>
                             <SubMenu icon={<GiStairsGoal color='blue' />} label="PAYROLL">
                                 <MenuItem icon={<GiStairsGoal color='blue' />}><Link href="/EmploymentJobHistory" className={dashStyle.dashLink}>PAYROLL YTD UPLOAD</Link></MenuItem>
                                 <MenuItem icon={<GiStairsGoal color='blue' />}><Link href="/ExecutedInitialPayrollRuns" className={dashStyle.dashLink}>INITIAL PAYROLL</Link></MenuItem>
-                                <MenuItem icon={<GiStairsGoal color='blue' />}> <Link href="/staff" className={dashStyle.dashLink}> INITIAL PAYROLL DETAILS</Link></MenuItem>
+                                <MenuItem icon={<GiStairsGoal color='blue' />}> <Link href="/payrollist" className={dashStyle.dashLink}> INITIAL PAYROLL DETAILS</Link></MenuItem>
                                 <MenuItem icon={<GiStairsGoal color='blue' />}><Link href='/Runpayroll' className={dashStyle.dashLink}>RUN FINAL PAYROLL</Link></MenuItem>
                                 <MenuItem icon={<GiStairsGoal color='blue' />}> <Link href="/staff" className={dashStyle.dashLink}> FINAL PAYROLL APPROVAL</Link></MenuItem>
-                                <MenuItem icon={<GiStairsGoal color='blue' />}> <Link href="/payrollist" className={dashStyle.dashLink}> FINAL PAYROLL DETAILS</Link></MenuItem>
+                                <MenuItem icon={<GiStairsGoal color='blue' />}> <Link href="/PayrollDashboard" className={dashStyle.dashLink}> FINAL PAYROLL DETAILS</Link></MenuItem>
                                 <MenuItem icon={<GiStairsGoal color='blue' />}> <Link href="/BankAdviceList" className={dashStyle.dashLink}> BANK ADVICE LIST</Link></MenuItem>
                                 <MenuItem icon={<GiStairsGoal color='blue' />}> <Link href="/StaffSalaryComponent" className={dashStyle.dashLink}> STAFF SALARY</Link></MenuItem>
                                 <MenuItem icon={<GiStairsGoal color='blue' />}><Link href="/PayrollComponentBulkUpload" className={dashStyle.dashLink}> PAYROLL COMPONENT BULK</Link></MenuItem>
                             </SubMenu>
                             <SubMenu icon={<GrUserSettings color='blue' />} label="SETTINGS">
-                                <MenuItem icon={<GrUserSettings color='blue' />}> COMPONENT MASTER<Link href="/staff" className={dashStyle.dashLink}> STAFF</Link></MenuItem>
+                                <MenuItem icon={<GrUserSettings color='blue' />}> <Link href="/ComponentMaster" className={dashStyle.dashLink}> COMPONENT MASTER</Link></MenuItem>
                                 <MenuItem icon={<GrUserSettings color='blue' />}> <Link href="/ComponentMappingDashboard" className={dashStyle.dashLink}> COMPONENT MAPPING</Link></MenuItem>
                                 <MenuItem icon={<GrUserSettings color='blue' />}> <Link href="/BIR2316MappingDash" className={dashStyle.dashLink}> BIR2316 MAPPING</Link></MenuItem>
                                 <MenuItem icon={<GrUserSettings color='blue' />}> <Link href="/PayperiodSettingsDash" className={dashStyle.dashLink}> PAYPERIOD SETTINGS</Link></MenuItem>
@@ -71,22 +71,22 @@ function SideBar
                             </SubMenu>
                             <SubMenu icon={<RiMastodonFill color='blue' />} label="MASTERS">
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/LeaveTypeDashboard" className={dashStyle.dashLink}> LEAVE TYPE</Link></MenuItem>
-                                <MenuItem icon={<RiMastodonFill color='blue' />}> LOAN TYPE<Link href="/staff" className={dashStyle.dashLink}> STAFF</Link></MenuItem>
+                                <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/LoanMasterDash" className={dashStyle.dashLink}> LOAN TYPE</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/ShiftMaster" className={dashStyle.dashLink}> SHIFT MASTER</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/CountryMasterDash" className={dashStyle.dashLink}> COUNTRY MASTER</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/StateMasterDash" className={dashStyle.dashLink}> PROVINCE MASTER</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/CityMasterDash" className={dashStyle.dashLink}> CITY MASTER</Link></MenuItem>
-                                <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/BarangayMasterForm" className={dashStyle.dashLink}> BARANGAY MASTER</Link></MenuItem>
+                                <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/BarangayMasterDash" className={dashStyle.dashLink}> BARANGAY MASTER</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/DepartmentMasterDashboard" className={dashStyle.dashLink}> DEPARTMENT MASTER</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/DivisionMasterDashboard" className={dashStyle.dashLink}> DIVISION MASTER</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/WorkLocationMasterDash" className={dashStyle.dashLink}> WORK LOCATION MASTER</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/BrandMasterDashboard" className={dashStyle.dashLink}> BAND MASTER</Link></MenuItem>
-                                <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/SubsidaryMasterForm" className={dashStyle.dashLink}> SUBSIDIARY MASTER</Link></MenuItem>
+                                <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/SubsidaryMasterDash" className={dashStyle.dashLink}> SUBSIDIARY MASTER</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/otMaster" className={dashStyle.dashLink}> OT MASTER</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/PositionMasterDash" className={dashStyle.dashLink}>  POSITION-MASTER</Link></MenuItem>
-                                <MenuItem icon={<RiMastodonFill color='blue' />}> JOB LEVEL TYPE<Link href="/staff" className={dashStyle.dashLink}> STAFF</Link></MenuItem>
+                                <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/LevelTypeDash" className={dashStyle.dashLink}> JOB LEVEL TYPE</Link></MenuItem>
                                 <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/GroupMaster" className={dashStyle.dashLink}> GROUP MASTER</Link></MenuItem>
-                                <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/SubSectionMasterForm" className={dashStyle.dashLink}> SUB-SECTION MASTER</Link></MenuItem>
+                                <MenuItem icon={<RiMastodonFill color='blue' />}> <Link href="/SubSectionMaster" className={dashStyle.dashLink}> SUB-SECTION MASTER</Link></MenuItem>
                             </SubMenu>
                             <MenuItem icon={<FaHandsHelping color='blue' />}><Link href="/AdminHelp" className={dashStyle.dashLink}> Help</Link> </MenuItem>
                             <MenuItem icon={<FcCustomerSupport color='red' />}><Link href="/SupportTicketDashboard" className={dashStyle.dashLink}>  SUPPORT TICKETS </Link></MenuItem>

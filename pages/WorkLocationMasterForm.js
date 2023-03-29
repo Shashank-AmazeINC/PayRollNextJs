@@ -3,7 +3,7 @@ import Styles from "../styles/WorkLocationMasterForm.module.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-
+import Link from "next/link";
 
 function WorkLocationMasterForm(){
     const validationSchema = Yup.object().shape({
@@ -52,7 +52,7 @@ function WorkLocationMasterForm(){
             <div className="row ">
               <div className="col-lg-8"></div>
               <div className="col-lg-4">
-                <button id={Styles.btn} onClick={() => reset()}>Cancel</button>
+                <Link href="/WorkLocationMasterDash"><button id={Styles.btn} onClick={() => reset()}>Cancel</button></Link>
                 <button id={Styles.btn} type="submit">Submit</button>
               </div>
             </div>
