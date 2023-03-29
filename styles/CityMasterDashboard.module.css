@@ -4,7 +4,7 @@
     background: #fff;
   
     width: 100%;
-    position: relative;
+    /*position:relative;*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

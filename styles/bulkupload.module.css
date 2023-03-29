@@ -5,7 +5,7 @@
     box-shadow: 1px 1px 15px 3px #0000001f;
     border-radius: 12px;
     width: 100%;
-    position: relative;
+    /*position:relative;*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
