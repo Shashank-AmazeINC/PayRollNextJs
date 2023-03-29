@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Styles from "../styles/employmentJobHistory.module.css";
 import { useForm } from 'react-hook-form';
-
+import leaveform from '../styles/LeaveTypeForm.module.css'
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import * as Yup from 'yup';
@@ -11,8 +11,8 @@ import * as Yup from 'yup';
   function ComponentMappingForm() {
       return (
         
-          <div className="container">
-            <div className="row">
+          <div className="container-fluid">
+            <div  className="row">
               <div className="col-lg-4">
                 <h3 className="Heading">Component Mapping</h3>
               </div>
@@ -20,7 +20,7 @@ import * as Yup from 'yup';
               <div className="col-lg-2"></div>
             </div>
             <br />
-            <div className="card">
+            <div  className={leaveform.card}>
               <div className="row">
                 <div className="col-lg-2">
                   <label>
