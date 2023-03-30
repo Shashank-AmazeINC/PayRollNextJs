@@ -3,7 +3,7 @@ import Styles from "../styles/BIR2316MappingForm.module.css"
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-
+import Link from "next/link";
 function BIRForm() {
     const validationSchema = Yup.object().shape({
         Year: Yup.string().required('Year is required'),
@@ -251,7 +251,7 @@ function BIRForm() {
             <br></br>
             <div className="row">
                 <div className="col-lg-4">
-                    <label>47 Fees Including Director's Fees</label>
+                    <label>47 Fees Including Directors Fees</label>
                 </div>
                 <div className="col-lg-4">
                 <select class="form-select"
@@ -442,7 +442,7 @@ function BIRForm() {
             </div>
             <div className="row">
             <div className="col-lg-4">  
-                <button id={Styles.btn} onClick={() => reset()}>Cancel</button>  
+               <Link href="/BIR2316MappingDash"> <button id={Styles.btn} onClick={() => reset()}>Cancel</button> </Link> 
             </div>
             <div className="col-lg-4"></div>
             <div className="col-lg-4">

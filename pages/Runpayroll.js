@@ -1,7 +1,9 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import runpayroll from '../styles/runpayroll.module.css'
+import { Button, Card, Collapse } from "reactstrap";
 function Runpayroll() {
+    const [collapseOpen, setCollapseOpen] = React.useState(false);
     return (
         <div>
             <br></br>
@@ -46,9 +48,17 @@ function Runpayroll() {
                         </div>
                     </div>
                     <div className="col-lg-2">
-                        <br ></br><p></p>
-                        <button data-toggle="collapse" data-target="#employee" class="button collapsed" aria-expanded="false">Fetch Employees
-                        </button>
+                        <br/><br/>
+                        <Button
+          color="primary"
+          type="button"
+          id="collapseExample"
+          onClick={() => {
+            setCollapseOpen(!collapseOpen);
+          }}
+        >
+          Fetch Employees
+        </Button>
                     </div>
                     <div className="col-lg-2">
                         <p >Search <br ></br></p>
@@ -101,9 +111,11 @@ function Runpayroll() {
                 <div className="col-lg-3">
                 </div>
             </div>
-            <div id="employee1" className="row rowwidth collapse" style={{ height: "500px" }}><div className="col-lg-12">
+            <div id="employee1" className="row row" style={{ height: "500px" }}><div className="col-lg-12">
+                <Collapse isOpen={collapseOpen}>
+               
                 <table id="downloadaplication" className="table table-bordered fonttxt" style={{ height: "300px" }}>
-                    <thead >
+                    <thead className='bg-info text-white ' >
                         <tr >
                             <th >
                                 <input type="checkbox"></input>
@@ -119,23 +131,12 @@ function Runpayroll() {
                     </thead>
                     <tbody >
                     </tbody>
-                </table>
+                </table> </Collapse>
             </div>
                 <div className="text-right">
                     <br></br>
-                    <pagination-controls className="poppinns">
-                        <pagination-template>
-                            <ul className="ngx-pagination" aria-label="Pagination">
-                                <li className="pagination-previous">
-
-                                </li>
-
-                                <li className="small-screen">  / NaN </li>
-
-                                <li class="pagination-next"><a tabindex="0" aria-label="Next page"> Next <span class="show-for-sr">page</span></a>
-                                </li>
-                            </ul></pagination-template></pagination-controls
-                    ></div>
+                   
+                    </div>
             </div>
             <br ></br><br ></br>
             <div id="employee" class="row rowwidth collapse" >
@@ -158,21 +159,11 @@ function Runpayroll() {
 
                         </tbody>
                     </table>
+                    
                 </div>
                 <div className="text-right">
                     <br ></br>
-                    <pagination-controls className="poppinns">
-                        <pagination-template><ul className="pagination" aria-label="Pagination">
-                            <li className="pagination-previous">
-                            </li>
-                            <li class="small-screen">  / NaN </li>
-                            <li className="pagination-next">
-                                <a tabindex="0" aria-label="Next page"> Next
-                                    <span className="show-for-sr">page</span></a>
-                            </li>
-                        </ul>
-                        </pagination-template>
-                    </pagination-controls>
+                  
                 </div>
             </div>
             
