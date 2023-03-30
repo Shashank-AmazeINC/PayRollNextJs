@@ -1,6 +1,7 @@
 import React from 'react'
 import table from '../styles/company.module.css'
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 function Company() {
     return (
         <div>
@@ -41,7 +42,7 @@ function Company() {
                                             </td>
                                             <td clasName={table.tabledetail}>Purego.ph</td>
                                             <td clasName={table.tabledetail}>884234924</td>
-                                            <td><button class="edit-btn">Edit</button><br /><br /><button class="edit-btn">Delete
+                                            <td><Link href="/CompanyProfile"><button class="edit-btn">Edit</button></Link><br /><br /><button class="edit-btn">Delete
                                             </button>
                                             </td>
                                         </tr>
