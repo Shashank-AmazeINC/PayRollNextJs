@@ -4,7 +4,8 @@ import React from 'react'
 function AddressDetailsWizard() {
     return (
         <div>
-            <Link href="/components/layout/EmployeeProfile">EmployeeProfile</Link>
+            <Link href="/EmployeeProfile">EmployeeProfile</Link><br/>
+            <Link href="/PositionDetails">PositionDetails</Link><br/>
         </div>
     )
 }
