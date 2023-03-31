@@ -26,7 +26,7 @@ function LevelTypeDash() {
                 </div>
                 <div className='col-lg-8'></div>
                 <div className='col-lg-2 mt-2 text-end'>
-                    <Link href="/components/layout/LevelTypeForm" id='AddButton' className='btn btn-primary'>Add New</Link>
+                    <Link href="/LevelTypeForm" id='AddButton' className='btn btn-primary'>Add New</Link>
                 </div>
 
                 <table className='table table-hover mt-4 '>
