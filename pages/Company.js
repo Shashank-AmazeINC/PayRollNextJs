@@ -2,25 +2,26 @@ import React from 'react'
 import table from '../styles/company.module.css'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
+
 function Company() {
     return (
         <div>
-            <div class="col-lg-10 " id={table.column}>
+            <div className="col-lg-10 " id={table.column}>
                 <br />
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <p class="Heading1">Company Dashboard</p>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <p className="Heading1">Company Dashboard</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-8 View"></div>
+                    <div className="row">
+                        <div className="col-lg-8 View"></div>
                     </div>
                     <br></br>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <table class="table table-hover mt-4">
-                                    <thead className='bg-info text-white ' >
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <table className="table table-hover mt-4">
+                                    <thead classNameName='bg-info text-white ' >
                                         <th>Company Logo</th>
                                         <th>Company Name</th>
                                         <th>Nature of Business</th>
@@ -32,7 +33,7 @@ function Company() {
                                         <tr></tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="newFont">
+                                        <tr className="newFont">
                                             <td style={{width: "10%"}}></td>
                                             <td clasName={table.tabledetail}>Ayala Land, Inc.</td>
                                             <td clasName={table.tabledetail}>E commerce</td>
@@ -42,7 +43,7 @@ function Company() {
                                             </td>
                                             <td clasName={table.tabledetail}>Purego.ph</td>
                                             <td clasName={table.tabledetail}>884234924</td>
-                                            <td><Link href="/CompanyProfile"><button class="edit-btn">Edit</button></Link><br /><br /><button class="edit-btn">Delete
+                                            <td><Link href="/CompanyProfile"><button className="edit-btn">Edit</button></Link><br /><br /><button className="edit-btn">Delete
                                             </button>
                                             </td>
                                         </tr>

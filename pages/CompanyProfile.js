@@ -2,44 +2,79 @@ import React from 'react'
 import profile from '../styles/companyprofile.module.css'
 import { useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
 function CompanyProfile() {
     const onDrop = useCallback(acceptedFiles => {  }, []) 
     const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+    const validationSchema = Yup.object().shape({
+
+        CompanyName: Yup.string()
+        .required('Companyname is required')
+        .min(6, 'at least 6 characters'),
+
+        NatureofBuisness: Yup.string()
+        .required('NatureofBuisness is required')
+        .min(6,'at least 6 characters'),
+
+        Address1: Yup.string()
+        .required('Description is required')
+            .min(25, 'min 25 characters'),
+        
+         Address2: Yup.string()
+         .required('Description is required')
+         .min(25, 'min 25 characters'),
+
+    });
+    const formOptions = { resolver: yupResolver(validationSchema) };
+
+    // get functions to build form with useForm() hook
+    const { register, handleSubmit, reset, formState } = useForm(formOptions);
+    const { errors } = formState;
+
+    function onSubmit(data) {
+        // display form data on success
+        alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
+        return false;
+    }
         return (
             <div>
                 <div className={profile.card}>
-                    <div class="container-fluid">
 
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <p class="Heading1">Company Profile</p>
+                    <div className="container-fluid">
+
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <p className="Heading1">Company Profile</p>
                             </div>
                         </div>
-                        <div class={profile.card}>
-                            <div class="row">
-                                <div class="col-lg-12 negative-padding">
-                                    <p class="companyinfo">Company Information</p>
+                        <div className={profile.card}>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <div className="row">
+                                <div className="col-lg-12 negative-padding">
+                                    <p className="companyinfo">Company Information</p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-2">
-                                    <p class="newFont">Company Logo</p>
+                            <div className="row leavereq">
+                                <div className="col-md-2">
+                                    <p className="newFont">Company Logo</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont"> Company Name<span style={{ color: "red" }}>*</span></p>
+                                <div className="col-md-2">
+                                    <p className="newFont"> Company Name<span style={{ color: "red" }}>*</span></p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Nature of Business</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Nature of Business</p>
                                 </div>
-                                <div class="col-md-3">
-                                    <p class="newFont">Address1</p>
+                                <div className="col-md-3">
+                                    <p className="newFont">Address1</p>
                                 </div>
-                                <div class="col-md-3">
-                                    <p class="newFont">Address2</p>
+                                <div className="col-md-3">
+                                    <p className="newFont">Address2</p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-2">
+                            <div className="row leavereq">
+                                <div className="col-md-2">
 
                                 <div className={profile.Dropzone} {...getRootProps()}><input {...getInputProps()} />
                                  { isDragActive ?
@@ -47,73 +82,75 @@ function CompanyProfile() {
                                  }
                                  </div>
                                 </div>
-                                <div class="col-md-2"><input placeholder="" class="form-control inputfield " /></div>
-                                <div class="col-md-2"><input placeholder="" class="form-control inputfield " /></div>
-                                <div class="col-md-3"><textarea placeholder="Address1" class="form-control inputfield "></textarea></div>
-                                <div class="col-md-3"><textarea placeholder="Address2" class="form-control inputfield "></textarea></div>
+                                <div className="col-md-2"> <input type="text"{...register('CompanyName')}  placeholder=" Name" name="Name" id="Name" className={`form-control ${errors.CompanyName ? 'is-invalid' : ''}`} />
+                                <div className="invalid-feedback">{errors.CompanyName?.message}</div></div>
+                                <div className="col-md-2"><input type="text"{...register('NatureofBuisness')}  placeholder="" name="Name" id="Name" className={`form-control ${errors.NatureofBuisness ? 'is-invalid' : ''}`} />
+                                <div className="invalid-feedback">{errors.NatureofBuisness ?.message}</div></div>
+                                <div className="col-md-3"><textarea placeholder="Address1" className="form-control inputfield "></textarea></div>
+                                <div className="col-md-3"><textarea placeholder="Address2" className="form-control inputfield "></textarea></div>
                             </div>
                             <br />
-                            <div class="row leavereq">
-                                <div class="col-md-2">
-                                    <p class="newFont">Zip Code</p>
+                            <div className="row leavereq">
+                                <div className="col-md-2">
+                                    <p className="newFont">Zip Code</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">RDO</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">RDO</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Email</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Email</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Phone</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Phone</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Fax</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Fax</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">TIN <span style={{ color: "red" }}>*</span></p>
+                                <div className="col-md-2">
+                                    <p className="newFont">TIN <span style={{ color: "red" }}>*</span></p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-2"><input placeholder="" class="form-control inputfield " /></div>
-                                <div class="col-md-2"><input placeholder="" class="form-control inputfield " /></div>
-                                <div class="col-md-2"><input placeholder="" class="form-control inputfield " /></div>
-                                <div class="col-md-2"><input placeholder="" onkeypress="return /[0-9]/i.test(event.key)" maxlength="11" class="form-control inputfield " /></div>
-                                <div class="col-md-2"><input placeholder="" class="form-control inputfield " /></div>
-                                <div class="col-md-2">
-                                    <input type="text" onkeypress="return /[0-9]/i.test(event.key)" maxlength="9" placeholder="Employee TIN" id="Tin" name="Tin" class="form-control " />
+                            <div className="row leavereq">
+                                <div className="col-md-2"><input placeholder="" className="form-control inputfield " /></div>
+                                <div className="col-md-2"><input placeholder="" className="form-control inputfield " /></div>
+                                <div className="col-md-2"><input placeholder="" className="form-control inputfield " /></div>
+                                <div className="col-md-2"><input placeholder="" onkeypress="return /[0-9]/i.test(event.key)" maxlength="11" className="form-control inputfield " /></div>
+                                <div className="col-md-2"><input placeholder="" className="form-control inputfield " /></div>
+                                <div className="col-md-2">
+                                    <input type="text" onkeypress="return /[0-9]/i.test(event.key)" maxlength="9" placeholder="Employee TIN" id="Tin" name="Tin" className="form-control " />
                                 </div>
                             </div>
                             <br />
-                            <div class="row leavereq">
-                                <div class="col-md-2">
-                                    <p class="newFont">SSS No. <span style={{ color: "red" }}>*</span></p>
+                            <div className="row leavereq">
+                                <div className="col-md-2">
+                                    <p className="newFont">SSS No. <span style={{ color: "red" }}>*</span></p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">PhilHealth No. <span style={{ color: "red" }}>*</span></p>
+                                <div className="col-md-2">
+                                    <p className="newFont">PhilHealth No. <span style={{ color: "red" }}>*</span></p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">HDMF No. <span style={{ color: "red" }}>*</span></p>
+                                <div className="col-md-2">
+                                    <p className="newFont">HDMF No. <span style={{ color: "red" }}>*</span></p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Country</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Country</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Province</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Province</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">City</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">City</p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-2">
-                                    <input type="text" onkeypress="return /[0-9]/i.test(event.key)" maxlength="10" placeholder="SSS No" id="SSN_No" name="SSN_No" class="form-control " />
+                            <div className="row leavereq">
+                                <div className="col-md-2">
+                                    <input type="text" onkeypress="return /[0-9]/i.test(event.key)" maxlength="10" placeholder="SSS No" id="SSN_No" name="SSN_No" className="form-control " />
                                 </div>
-                                <div class="col-md-2">
-                                    <input type="text" onkeypress="return /[0-9]/i.test(event.key)" maxlength="12" placeholder="PhilHealth No" id="PhilHealthNumber" name="PhilHealthNumber" class="form-control " />
+                                <div className="col-md-2">
+                                    <input type="text" onkeypress="return /[0-9]/i.test(event.key)" maxlength="12" placeholder="PhilHealth No" id="PhilHealthNumber" name="PhilHealthNumber" className="form-control " />
                                 </div>
-                                <div class="col-md-2"><input placeholder="" class="form-control inputfield " /></div>
-                                <div class="col-md-2">
-                                    <select id="CountryID" name="CountryID" class="form-control inputfield ">
+                                <div className="col-md-2"><input placeholder="" className="form-control inputfield " /></div>
+                                <div className="col-md-2">
+                                    <select id="CountryID" name="CountryID" className="form-control inputfield ">
                                         <option value="0" selected="">Select Country </option>
                                         <option value="327">Afghanistan</option>
                                         <option value="328">Åland Islands</option>
@@ -363,54 +400,54 @@ function CompanyProfile() {
 
                                     </select>
                                 </div>
-                                <div class="col-md-2">
-                                    <select id="StateID" name="StateID" class="form-control inputfield ">
-                                        <option value="0" class="textcolor">Select Province </option>
+                                <div className="col-md-2">
+                                    <select id="StateID" name="StateID" className="form-control inputfield ">
+                                        <option value="0" className="textcolor">Select Province </option>
 
                                     </select>
                                 </div>
-                                <div class="col-md-2">
-                                    <select id="CityID" name="CityID" class="form-control inputfield ">
-                                        <option value="0" class="textcolor">Select City </option>
+                                <div className="col-md-2">
+                                    <select id="CityID" name="CityID" className="form-control inputfield ">
+                                        <option value="0" className="textcolor">Select City </option>
 
                                     </select>
                                 </div>
                             </div>
                             <br />
-                            <div class="row leavereq">
-                                <div class="col-lg-2">
-                                    <p class="newFont">Barangay <span style={{ color: "red" }}>*</span></p>
+                            <div className="row leavereq">
+                                <div className="col-lg-2">
+                                    <p className="newFont">Barangay <span style={{ color: "red" }}>*</span></p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Company Bank ACC NO <span style={{ color: "red" }}>*</span></p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Company Bank ACC NO <span style={{ color: "red" }}>*</span></p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">CompanyId Code <span style={{ color: "red" }}>*</span></p>
+                                <div className="col-md-2">
+                                    <p className="newFont">CompanyId Code <span style={{ color: "red" }}>*</span></p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-lg-2">
-                                    <select id="Barangay" name="Barangay" class="form-control inputfield ">
-                                        <option value="0" class="textcolor">Select Barangay </option>
-                                        <option value="Anunas" class="textcolor">Anunas</option>
+                            <div className="row leavereq">
+                                <div className="col-lg-2">
+                                    <select id="Barangay" name="Barangay" className="form-control inputfield ">
+                                        <option value="0" className="textcolor">Select Barangay </option>
+                                        <option value="Anunas" className="textcolor">Anunas</option>
 
-                                        <option value="Balibago" class="textcolor">Balibago </option>
+                                        <option value="Balibago" className="textcolor">Balibago </option>
 
-                                        <option value="Capaya" class="textcolor">Capaya </option>
+                                        <option value="Capaya" className="textcolor">Capaya </option>
 
                                     </select>
                                 </div>
-                                <div class="col-md-2"><input placeholder="Company Bank AccNo" name="CompanyBankAccNo" id="CompanyBankAccNo" class="form-control inputfield " /></div>
-                                <div class="col-md-2"><input placeholder="CompanyCode" name="CompanyCode" id="CompanyCode" class="form-control inputfield " /></div>
+                                <div className="col-md-2"><input placeholder="Company Bank AccNo" name="CompanyBankAccNo" id="CompanyBankAccNo" className="form-control inputfield " /></div>
+                                <div className="col-md-2"><input placeholder="CompanyCode" name="CompanyCode" id="CompanyCode" className="form-control inputfield " /></div>
                             </div>
                             <br />
-                            <div class="row leavereq">
-                                <div class="col-md-2">
-                                    <p class="newFont">E-Signatory</p>
+                            <div className="row leavereq">
+                                <div className="col-md-2">
+                                    <p className="newFont">E-Signatory</p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-2">
+                            <div className="row leavereq">
+                                <div className="col-md-2">
 
                                 <div className={profile.Dropzone} {...getRootProps()}><input {...getInputProps()} />
                                  { isDragActive ?
@@ -421,40 +458,41 @@ function CompanyProfile() {
                                 </div>
                             </div>
                             <br />
-                            <div class="row">
-                                <div class="col-lg-4"></div>
-                                <div class="col-lg-2">
-                                    <button class="form-control SubmitBTN" style={{ backgroundColor: "#3247D5" }}>UPDATE</button>
+                            <div className="row">
+                                <div className="col-lg-4"></div>
+                                <div className="col-lg-2">
+                                    <button className="form-control SubmitBTN" style={{ backgroundColor: "#3247D5" }}>UPDATE</button>
                                 </div>
-                                <div class="col-lg-4"></div>
+                                <div className="col-lg-4"></div>
                             </div>
-                            <div class="col-md-1"></div>
+                            <div className="col-md-1"></div>
+                        </form>
                         </div>
-                        <div class={profile.card}>
-                            <div class="row">
-                                <div class="col-lg-12 negative-padding">
-                                    <p class="companyinfo">WORK POLICY</p>
+                        <div className={profile.card}>
+                            <div className="row">
+                                <div className="col-lg-12 negative-padding">
+                                    <p className="companyinfo">WORK POLICY</p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-2">
-                                    <p class="newFont">Work Days Per Year<span style={{ color: "red" }}>*</span></p>
+                            <div className="row leavereq">
+                                <div className="col-md-2">
+                                    <p className="newFont">Work Days Per Year<span style={{ color: "red" }}>*</span></p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Work Hours Per Day</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Work Hours Per Day</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Work Months Per Year<span style={{ color: "red" }}>*</span></p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Work Months Per Year<span style={{ color: "red" }}>*</span></p>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Daily Rate Factor<span style={{ color: "red" }}>*</span></p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Daily Rate Factor<span style={{ color: "red" }}>*</span></p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-2"><input class="form-control inputfield " /></div>
-                                <div class="col-md-2"><input class="form-control inputfield " /></div>
-                                <div class="col-md-2">
-                                    <select class="form-control inputfield ">
+                            <div className="row leavereq">
+                                <div className="col-md-2"><input className="form-control inputfield " /></div>
+                                <div className="col-md-2"><input className="form-control inputfield " /></div>
+                                <div className="col-md-2">
+                                    <select className="form-control inputfield ">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -469,277 +507,277 @@ function CompanyProfile() {
                                         <option value="12">12</option>
                                     </select>
                                 </div>
-                                <div class="col-md-2"><input class="form-control inputfield " /></div>
+                                <div className="col-md-2"><input className="form-control inputfield " /></div>
                             </div>
                             <br />
-                            <div class="row">
-                                <div class="col-lg-4"></div>
-                                <div class="col-lg-2">
-                                    <button class="form-control SubmitBTN" style={{ backgroundColor: "#3247D5" }}>UPDATE</button>
+                            <div className="row">
+                                <div className="col-lg-4"></div>
+                                <div className="col-lg-2">
+                                    <button className="form-control SubmitBTN" style={{ backgroundColor: "#3247D5" }}>UPDATE</button>
                                 </div>
-                                <div class="col-lg-4"></div>
+                                <div className="col-lg-4"></div>
                             </div>
                         </div>
                         <br />
-                        <div class={profile.card}>
-                            <div class="row">
-                                <div class="col-lg-12 negative-padding">
-                                    <p class="companyinfo">PAYROLL COMPUTATION</p>
+                        <div className={profile.card}>
+                            <div className="row">
+                                <div className="col-lg-12 negative-padding">
+                                    <p className="companyinfo">PAYROLL COMPUTATION</p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-2">
-                                    <p class="newFont"> Periods Per Month<span style={{ color: "red" }}>*</span></p>
+                            <div className="row leavereq">
+                                <div className="col-md-2">
+                                    <p className="newFont"> Periods Per Month<span style={{ color: "red" }}>*</span></p>
                                 </div>
-                                <div class="col-md-5">
-                                    <p class="newFont">Absent Deduction</p>
+                                <div className="col-md-5">
+                                    <p className="newFont">Absent Deduction</p>
                                 </div>
-                                <div class="col-md-5">
-                                    <p class="newFont">Late Deduction</p>
+                                <div className="col-md-5">
+                                    <p className="newFont">Late Deduction</p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-2">
-                                    <select class="form-control inputfield ">
+                            <div className="row leavereq">
+                                <div className="col-md-2">
+                                    <select className="form-control inputfield ">
                                         <option value="1 Monthly">1 Monthly</option>
                                         <option value="2(Semi-Monthly)">2 Semi-Monthly</option>
                                     </select>
                                 </div>
-                                <div class="col-md-5">
-                                    <div class={profile.card}>
-                                        <div class="row">
-                                            <div class="col-lg-3"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Absent_Deduction_BasicSalary" value="Absent_Deduction_BasicSalary" class="checkboxtxt " /><label for="Absent_Deduction_BasicSalary" class="newFont"> Basic Salary</label><br /></div>
-                                            <div class="col-lg-4"><input type="checkbox" id="Absent_Deduction_Deminimis" name="Absent_Deduction_Deminimis" value="Absent_Deduction_Deminimis" class="checkboxtxt " /><label for="Deminimis1" class="newFont">Deminimis</label></div>
-                                            <div class="col-lg-4"><input type="checkbox" id="Absent_Deduction_Allowance" name="Absent_Deduction_Allowance" value="Absent_Deduction_Allowance" class="checkboxtxt " /><label for="Allowance1" class="newFont">Allowance</label></div>
+                                <div className="col-md-5">
+                                    <div className={profile.card}>
+                                        <div className="row">
+                                            <div className="col-lg-3"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Absent_Deduction_BasicSalary" value="Absent_Deduction_BasicSalary" className="checkboxtxt " /><label for="Absent_Deduction_BasicSalary" className="newFont"> Basic Salary</label><br /></div>
+                                            <div className="col-lg-4"><input type="checkbox" id="Absent_Deduction_Deminimis" name="Absent_Deduction_Deminimis" value="Absent_Deduction_Deminimis" className="checkboxtxt " /><label for="Deminimis1" className="newFont">Deminimis</label></div>
+                                            <div className="col-lg-4"><input type="checkbox" id="Absent_Deduction_Allowance" name="Absent_Deduction_Allowance" value="Absent_Deduction_Allowance" className="checkboxtxt " /><label for="Allowance1" className="newFont">Allowance</label></div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-6"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Absent_Deduction_Reimbursement" value="Absent_Deduction_Reimbursement" class="checkboxtxt " /><label for="Reimbursement_Allowance1" class="newFont">Reimbursement Allowance</label></div>
-                                            <div class="col-lg-3"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Absent_Deduction_ECOLA" value="Absent_Deduction_ECOLA" class="checkboxtxt " /><label for="ECOLA1" class="newFont">ECOLA</label></div>
-                                            <div class="col-lg-3"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Absent_Deduction_Bonus" value="Absent_Deduction_Bonus" class="checkboxtxt " /><label for="Bonus1" class="newFont">Bonus</label></div>
+                                        <div className="row">
+                                            <div className="col-lg-6"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Absent_Deduction_Reimbursement" value="Absent_Deduction_Reimbursement" className="checkboxtxt " /><label for="Reimbursement_Allowance1" className="newFont">Reimbursement Allowance</label></div>
+                                            <div className="col-lg-3"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Absent_Deduction_ECOLA" value="Absent_Deduction_ECOLA" className="checkboxtxt " /><label for="ECOLA1" className="newFont">ECOLA</label></div>
+                                            <div className="col-lg-3"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Absent_Deduction_Bonus" value="Absent_Deduction_Bonus" className="checkboxtxt " /><label for="Bonus1" className="newFont">Bonus</label></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
-                                    <div class={profile.card}>
-                                        <div class="row">
-                                            <div class="col-lg-4"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Late_Deduction_Basic_Salary" value="Late_Deduction_Basic_Salary" class="checkboxtxt " /><label class="newFont">Basic Salary</label></div>
-                                            <div class="col-lg-4"><input type="checkbox" id="Late_Deduction_Deminimis" name="Late_Deduction_Deminimis" value="Late_Deduction_Deminimis" class="checkboxtxt " /><label class="checkboxtxt newFont">Deminimis</label></div>
-                                            <div class="col-lg-4"><input type="checkbox" id="Late_Deduction_Allowance" name="Late_Deduction_Allowance" value="Late_Deduction_Allowance" class="checkboxtxt " /><label class="checkboxtxt newFont">Allowance</label></div>
+                                <div className="col-md-5">
+                                    <div className={profile.card}>
+                                        <div className="row">
+                                            <div className="col-lg-4"><input type="checkbox" id="Absent_Deduction_BasicSalary" name="Late_Deduction_Basic_Salary" value="Late_Deduction_Basic_Salary" className="checkboxtxt " /><label className="newFont">Basic Salary</label></div>
+                                            <div className="col-lg-4"><input type="checkbox" id="Late_Deduction_Deminimis" name="Late_Deduction_Deminimis" value="Late_Deduction_Deminimis" className="checkboxtxt " /><label className="checkboxtxt newFont">Deminimis</label></div>
+                                            <div className="col-lg-4"><input type="checkbox" id="Late_Deduction_Allowance" name="Late_Deduction_Allowance" value="Late_Deduction_Allowance" className="checkboxtxt " /><label className="checkboxtxt newFont">Allowance</label></div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-6"><input type="checkbox" id="Late_Deduction_Reimbursement" name="Late_Deduction_Reimbursement" value="Late_Deduction_Reimbursement" class="checkboxtxt " /><label class="checkboxtxt newFont">Reimbursement Allowance</label></div>
-                                            <div class="col-lg-3"><input type="checkbox" id="Late_Deduction_ECOLA" name="Late_Deduction_ECOLA" value="Late_Deduction_ECOLA" class="checkboxtxt " /><label class="checkboxtxt newFont">ECOLA</label></div>
-                                            <div class="col-lg-3"><input type="checkbox" id="Late_Deduction_Bonus" name="Late_Deduction_Bonus" value="Late_Deduction_Bonus" class="checkboxtxt " /><label class="checkboxtxt newFont">Bonus</label></div>
+                                        <div className="row">
+                                            <div className="col-lg-6"><input type="checkbox" id="Late_Deduction_Reimbursement" name="Late_Deduction_Reimbursement" value="Late_Deduction_Reimbursement" className="checkboxtxt " /><label className="checkboxtxt newFont">Reimbursement Allowance</label></div>
+                                            <div className="col-lg-3"><input type="checkbox" id="Late_Deduction_ECOLA" name="Late_Deduction_ECOLA" value="Late_Deduction_ECOLA" className="checkboxtxt " /><label className="checkboxtxt newFont">ECOLA</label></div>
+                                            <div className="col-lg-3"><input type="checkbox" id="Late_Deduction_Bonus" name="Late_Deduction_Bonus" value="Late_Deduction_Bonus" className="checkboxtxt " /><label className="checkboxtxt newFont">Bonus</label></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <br />
-                            <div class="row leavereq">
-                                <div class="col-md-12">
-                                    <p class="newFont">Govt Contributions </p>
+                            <div className="row leavereq">
+                                <div className="col-md-12">
+                                    <p className="newFont">Govt Contributions </p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-1">
-                                    <p class="newFont">SSS:</p>
+                            <div className="row leavereq">
+                                <div className="col-md-1"></div>
+                                <div className="col-md-1">
+                                    <p className="newFont">SSS:</p>
                                 </div>
-                                <div class="col-md-1">
-                                    <div class="row">
-                                        <div class="form-check"><input type="radio" id="sss" name="sss" class="form-check-input " /><label for="flexRadioDefault2" class="form-check-label newFont"> Yes </label></div>
-                                        <div class="form-check"><input type="radio" id="sss" name="sss" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> No </label></div>
+                                <div className="col-md-1">
+                                    <div className="row">
+                                        <div className="form-check"><input type="radio" id="sss" name="sss" className="form-check-input " /><label for="flexRadioDefault2" className="form-check-label newFont"> Yes </label></div>
+                                        <div className="form-check"><input type="radio" id="sss" name="sss" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> No </label></div>
                                     </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <p class="newFont">Pagibig:</p>
+                                <div className="col-md-1">
+                                    <p className="newFont">Pagibig:</p>
                                 </div>
-                                <div class="col-lg-1">
-                                    <div class="row">
-                                        <div class="form-check"><input type="radio" id="pagibig" name="pagibig" class="form-check-input " /><label for="flexRadioDefault2" class="form-check-label newFont"> Yes </label></div>
-                                        <div class="form-check"><input type="radio" id="pagibig" name="pagibig" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> No </label></div>
+                                <div className="col-lg-1">
+                                    <div className="row">
+                                        <div className="form-check"><input type="radio" id="pagibig" name="pagibig" className="form-check-input " /><label for="flexRadioDefault2" className="form-check-label newFont"> Yes </label></div>
+                                        <div className="form-check"><input type="radio" id="pagibig" name="pagibig" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> No </label></div>
                                     </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <p class="newFont">Philhealth:</p>
+                                <div className="col-md-1">
+                                    <p className="newFont">Philhealth:</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <div class="row">
-                                        <div class="form-check"><input type="radio" id="philhealth" name="philhealth" class="form-check-input " /><label for="flexRadioDefault2" class="form-check-label newFont"> Yes </label></div>
-                                        <div class="form-check"><input type="radio" id="philhealth" name="philhealth" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> No </label></div>
+                                <div className="col-md-2">
+                                    <div className="row">
+                                        <div className="form-check"><input type="radio" id="philhealth" name="philhealth" className="form-check-input " /><label for="flexRadioDefault2" className="form-check-label newFont"> Yes </label></div>
+                                        <div className="form-check"><input type="radio" id="philhealth" name="philhealth" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> No </label></div>
                                     </div>
                                 </div>
                             </div>
                             <br />
-                            <div class="row leavereq">
-                                <div class="col-md-12">
-                                    <p class="newFont">Attendance Configuration</p>
+                            <div className="row leavereq">
+                                <div className="col-md-12">
+                                    <p className="newFont">Attendance Configuration</p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Attendance:</p>
+                            <div className="row leavereq">
+                                <div className="col-md-1"></div>
+                                <div className="col-md-2">
+                                    <p className="newFont">Attendance:</p>
                                 </div>
-                                <div class="col-md-1">
-                                    <div class="row">
-                                        <div class="form-check"><input type="radio" id="Attendance" name="Attendance" class="form-check-input " /><label for="flexRadioDefault2" class="form-check-label newFont"> Yes </label></div>
-                                        <div class="form-check"><input type="radio" id="Attendance" name="Attendance" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> No </label></div>
+                                <div className="col-md-1">
+                                    <div className="row">
+                                        <div className="form-check"><input type="radio" id="Attendance" name="Attendance" className="form-check-input " /><label for="flexRadioDefault2" className="form-check-label newFont"> Yes </label></div>
+                                        <div className="form-check"><input type="radio" id="Attendance" name="Attendance" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> No </label></div>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <p class="newFont">Undertime(min):</p>
+                                <div className="col-md-2">
+                                    <p className="newFont">Undertime(min):</p>
                                 </div>
 
-                                <div class="col-lg-1">
-                                    <div class="row">
-                                        <div class="form-check"><input type="radio" id="Undertime" name="Undertime" class="form-check-input " /><label for="flexRadioDefault2" class="form-check-label newFont"> Yes </label></div>
-                                        <div class="form-check"><input type="radio" id="Undertime" name="Undertime" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> No </label></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-1"><input class="form-control inputfield " /></div>
-
-                                <div class="col-md-1">
-                                    <p class="newFont">Late(min):</p>
-                                </div>
-
-                                <div class="col-md-1">
-                                    <div class="row">
-                                        <div class="form-check"><input type="radio" id="Late" name="Late" class="form-check-input " /><label for="flexRadioDefault2" class="form-check-label newFont"> Yes </label></div>
-                                        <div class="form-check"><input type="radio" id="ProratedDaily" name="ProratedDaily" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> No </label></div>
+                                <div className="col-lg-1">
+                                    <div className="row">
+                                        <div className="form-check"><input type="radio" id="Undertime" name="Undertime" className="form-check-input " /><label for="flexRadioDefault2" className="form-check-label newFont"> Yes </label></div>
+                                        <div className="form-check"><input type="radio" id="Undertime" name="Undertime" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> No </label></div>
                                     </div>
                                 </div>
 
-                                <div class="col-md-1"><input class="form-control inputfield " /></div>
+                                <div className="col-md-1"><input className="form-control inputfield " /></div>
+
+                                <div className="col-md-1">
+                                    <p className="newFont">Late(min):</p>
+                                </div>
+
+                                <div className="col-md-1">
+                                    <div className="row">
+                                        <div className="form-check"><input type="radio" id="Late" name="Late" className="form-check-input " /><label for="flexRadioDefault2" className="form-check-label newFont"> Yes </label></div>
+                                        <div className="form-check"><input type="radio" id="ProratedDaily" name="ProratedDaily" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> No </label></div>
+                                    </div>
+                                </div>
+
+                                <div className="col-md-1"><input className="form-control inputfield " /></div>
 
                             </div>
                             <br /><br />
 
-                            <div class={profile.card}>
-                                <div class="row leavereq tiles">
-                                    <div class="col-md-12">
-                                        <p class="newFont">13th Month Computation</p>
+                            <div className={profile.card}>
+                                <div className="row leavereq tiles">
+                                    <div className="col-md-12">
+                                        <p className="newFont">13th Month Computation</p>
                                     </div>
                                 </div>
-                                <div class="row leavereq tiles">
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-5">
-                                        <p class="newFont"> Computation Type:</p>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="form-check"><input type="radio" id="thirteen_Month_Compuatation_Type" name="thirteen_Month_Compuatation_Type" value="Pro-rated/Current/Full Salary" class="form-check-input " /><label for="proratedadvance2" class="form-check-label newFont"> Pro-rated/Current/Full Salary </label></div>
+                                <div className="row leavereq tiles">
+                                    <div className="col-md-1"></div>
+                                    <div className="col-md-5">
+                                        <p className="newFont"> Computation Type:</p>
+                                        <div className="row">
+                                            <div className="col-lg-6">
+                                                <div className="form-check"><input type="radio" id="thirteen_Month_Compuatation_Type" name="thirteen_Month_Compuatation_Type" value="Pro-rated/Current/Full Salary" className="form-check-input " /><label for="proratedadvance2" className="form-check-label newFont"> Pro-rated/Current/Full Salary </label></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <br /><br />
-                                <div class="row leavereq tiles">
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-1">
-                                        <p class="newFont">Optional:</p>
+                                <div className="row leavereq tiles">
+                                    <div className="col-md-1"></div>
+                                    <div className="col-md-1">
+                                        <p className="newFont">Optional:</p>
                                     </div>
-                                    <div class="col-md-2"><input type="checkbox" id="ComputationBasic" name="ComputationBasic" value="ComputationBasicAdjustment" class="form-check-input " /><label class="checkboxtxt newFont">Basic</label></div>
+                                    <div className="col-md-2"><input type="checkbox" id="ComputationBasic" name="ComputationBasic" value="ComputationBasicAdjustment" className="form-check-input " /><label className="checkboxtxt newFont">Basic</label></div>
                                 </div>
-                                <div class="row leavereq tiles">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-2"><input type="checkbox" id="ComputationDeminimis" name="ComputationDeminimis" value="ComputationDeminimis" class="form-check-input " /><label class="checkboxtxt newFont">Deminimis</label></div>
+                                <div className="row leavereq tiles">
+                                    <div className="col-md-2"></div>
+                                    <div className="col-md-2"><input type="checkbox" id="ComputationDeminimis" name="ComputationDeminimis" value="ComputationDeminimis" className="form-check-input " /><label className="checkboxtxt newFont">Deminimis</label></div>
                                 </div>
                             </div>
 
                             <br />
-                            <div class="row leavereq">
-                                <div class="col-md-12">
-                                    <p class="newFont"> Final Pay Computation</p>
+                            <div className="row leavereq">
+                                <div className="col-md-12">
+                                    <p className="newFont"> Final Pay Computation</p>
                                 </div>
                             </div>
-                            <div class="row leavereq">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-3">
-                                    <p class="newFont">Deduct Absent?</p>
-                                    <div class="row">
-                                        <div class="col-lg-3">
-                                            <div class="form-check"><input type="radio" id="FinalPay_Deduct_Absent" name="FinalPay_Deduct_Absent" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> Yes </label></div>
+                            <div className="row leavereq">
+                                <div className="col-md-1"></div>
+                                <div className="col-md-3">
+                                    <p className="newFont">Deduct Absent?</p>
+                                    <div className="row">
+                                        <div className="col-lg-3">
+                                            <div className="form-check"><input type="radio" id="FinalPay_Deduct_Absent" name="FinalPay_Deduct_Absent" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> Yes </label></div>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-check"><input type="radio" id="FinalPay_Deduct_Absent" name="FinalPay_Deduct_Absent" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> No </label></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <p class="newFont">Deduct Late/Undertime?</p>
-                                    <div class="row">
-                                        <div class="col-lg-3">
-                                            <div class="form-check"><input type="radio" id="FinalPay_Deduct_Late" name="FinalPay_Deduct_Late" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> Yes </label></div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-check"><input type="radio" id="FinalPay_Deduct_Late" name="FinalPay_Deduct_Late" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> No </label></div>
+                                        <div className="col-lg-3">
+                                            <div className="form-check"><input type="radio" id="FinalPay_Deduct_Absent" name="FinalPay_Deduct_Absent" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> No </label></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <p class="newFont">Include 13th Month Pay?</p>
-                                    <div class="row">
-                                        <div class="col-lg-3">
-                                            <div class="form-check"><input type="radio" id="Final_Pay_13th_Month" name="Final_Pay_13th_Month" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> Yes </label></div>
+                                <div className="col-md-3">
+                                    <p className="newFont">Deduct Late/Undertime?</p>
+                                    <div className="row">
+                                        <div className="col-lg-3">
+                                            <div className="form-check"><input type="radio" id="FinalPay_Deduct_Late" name="FinalPay_Deduct_Late" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> Yes </label></div>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-check"><input type="radio" id="Final_Pay_13th_Month" name="Final_Pay_13th_Month" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> No </label></div>
+                                        <div className="col-lg-3">
+                                            <div className="form-check"><input type="radio" id="FinalPay_Deduct_Late" name="FinalPay_Deduct_Late" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> No </label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-3">
+                                    <p className="newFont">Include 13th Month Pay?</p>
+                                    <div className="row">
+                                        <div className="col-lg-3">
+                                            <div className="form-check"><input type="radio" id="Final_Pay_13th_Month" name="Final_Pay_13th_Month" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> Yes </label></div>
+                                        </div>
+                                        <div className="col-lg-3">
+                                            <div className="form-check"><input type="radio" id="Final_Pay_13th_Month" name="Final_Pay_13th_Month" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> No </label></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <br />
-                            <div class="row">
-                                <div class="col-lg-4"></div>
-                                <div class="col-lg-2">
-                                    <button class="form-control SubmitBTN" style={{ backgroundColor: "#3247D5" }}>UPDATE</button>
+                            <div className="row">
+                                <div className="col-lg-4"></div>
+                                <div className="col-lg-2">
+                                    <button className="form-control SubmitBTN" style={{ backgroundColor: "#3247D5" }}>UPDATE</button>
                                 </div>
-                                <div class="col-lg-4"></div>
+                                <div className="col-lg-4"></div>
                             </div>
                         </div>
                         <br />
-                        <div class={profile.card}>
-                            <div class="row">
-                                <div class="col-lg-12 negative-padding">
-                                    <p class="companyinfo">TAX COMPUTATIONS</p>
+                        <div className={profile.card}>
+                            <div className="row">
+                                <div className="col-lg-12 negative-padding">
+                                    <p className="companyinfo">TAX COMPUTATIONS</p>
                                 </div>
                             </div>
                             <br />
-                            <div class="row">
-                                <div class="col-lg-2"><label class="newFont">Payroll Calendar</label></div>
-                                <div class="col-lg-6">
-                                    <div class="form-check"><input type="checkbox" id="PayRoll_Calender" name="PayRoll_Calender" class="form-check-input " value="true" /><label for="flexRadioDefault1" class="form-check-label newFont"> Calendar Year(From January to December) </label></div>
+                            <div className="row">
+                                <div className="col-lg-2"><label className="newFont">Payroll Calendar</label></div>
+                                <div className="col-lg-6">
+                                    <div className="form-check"><input type="checkbox" id="PayRoll_Calender" name="PayRoll_Calender" className="form-check-input " value="true" /><label for="flexRadioDefault1" className="form-check-label newFont"> Calendar Year(From January to December) </label></div>
                                 </div>
                             </div>
                             <br />
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <p class="newFont">Tax Calculation:</p>
+                            <div className="row">
+                                <div className="col-md-2">
+                                    <p className="newFont">Tax Calculation:</p>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="row">
-                                        <div class="form-check"><input type="radio" id="taxcomputationtype" name="taxcomputationtype" class="form-check-input " /><label for="flexRadioDefault2" class="form-check-label newFont"> Semi Monthly </label></div>
-                                        <div class="form-check"><input type="radio" id="taxcomputationtype" name="taxcomputationtype" class="form-check-input " /><label for="flexRadioDefault1" class="form-check-label newFont"> Annual </label></div>
+                                <div className="col-md-4">
+                                    <div className="row">
+                                        <div className="form-check"><input type="radio" id="taxcomputationtype" name="taxcomputationtype" className="form-check-input " /><label for="flexRadioDefault2" className="form-check-label newFont"> Semi Monthly </label></div>
+                                        <div className="form-check"><input type="radio" id="taxcomputationtype" name="taxcomputationtype" className="form-check-input " /><label for="flexRadioDefault1" className="form-check-label newFont"> Annual </label></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-4"><label class="newFont">Non-Tax Exemption Ceiling<span style={{ color: "red" }}>*</span></label></div>
-                                <div class="col-lg-4"><label class="newFont">Deminimis Exemption Ceiling<span style={{ color: "red" }}>*</span></label></div>
+                            <div className="row">
+                                <div className="col-lg-4"><label className="newFont">Non-Tax Exemption Ceiling<span style={{ color: "red" }}>*</span></label></div>
+                                <div className="col-lg-4"><label className="newFont">Deminimis Exemption Ceiling<span style={{ color: "red" }}>*</span></label></div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-4"><input placeholder="20,50,000" class="form-control " /></div>
-                                <div class="col-lg-4"><input placeholder="90,00,000" class="form-control " /></div>
+                            <div className="row">
+                                <div className="col-lg-4"><input placeholder="20,50,000" className="form-control " /></div>
+                                <div className="col-lg-4"><input placeholder="90,00,000" className="form-control " /></div>
                             </div>
                         </div>
                         <br />
-                        <div class="row">
-                            <div class="col-lg-4"></div>
-                            <div class="col-lg-2">
-                                <button class="form-control SubmitBTN" style={{ backgroundColor: "#3247D5" }}>UPDATE</button>
+                        <div className="row">
+                            <div className="col-lg-4"></div>
+                            <div className="col-lg-2">
+                                <button className="form-control SubmitBTN" style={{ backgroundColor: "#3247D5" }}>UPDATE</button>
                             </div>
-                            <div class="col-lg-4"></div>
+                            <div className="col-lg-4"></div>
                         </div>
                     </div>
                 </div>
