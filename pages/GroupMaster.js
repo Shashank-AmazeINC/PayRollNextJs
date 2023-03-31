@@ -25,6 +25,16 @@ function GroupMaster() {
                     <Link href="/GroupMasterForm" id='AddButton' className='btn btn-primary'>Add New</Link>
                 </div>
             </div>
+
+            <table className='table table-hover mt-4 '>
+                <thead className='bg-info text-white '>
+                    <tr>
+                        <th>Short</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     )
 }

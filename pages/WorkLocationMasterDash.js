@@ -2,9 +2,9 @@ import Link from 'next/link'
 import React from 'react'
 
 function WorkLocationMasterDash() {
-  return (
-    <div>
-        <h3 className='text-primary fs-5 mt-3'>Worklocation Master</h3>
+    return (
+        <div>
+            <h3 className='text-primary fs-5 mt-3'>Worklocation Master</h3>
             <div className='card p-3 border-0 shadow-lg rounded-3 mt-4'>
                 <div className='row'>
                     <div className='col-lg-1'>
@@ -18,13 +18,23 @@ function WorkLocationMasterDash() {
             </div>
 
             <div className='row mt-2'>
-                    <div className='col-lg-10'></div>
-                    <div className='col-lg-2 '>
-                        <Link href="/WorkLocationMasterForm" id='AddButton' className='btn btn-primary fw-bold'>Add New</Link>
-                    </div>
+                <div className='col-lg-10'></div>
+                <div className='col-lg-2 '>
+                    <Link href="/WorkLocationMasterForm" id='AddButton' className='btn btn-primary fw-bold'>Add New</Link>
                 </div>
-    </div>
-  )
+            </div>
+
+            <table className='table table-hover mt-4 '>
+                <thead className='bg-info text-white '>
+                    <tr>
+                        <th>Short Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    )
 }
 
 export default WorkLocationMasterDash
