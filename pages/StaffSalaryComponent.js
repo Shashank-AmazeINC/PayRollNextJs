@@ -38,6 +38,7 @@ function StaffSalaryComponent() {
             <div className='row'>
                 <div className='col-lg-8'></div>
                 <div className='col-lg-2 mt-2 text-end'>
+                    <Link href="AddSalaryDetails" id='AddButton' className='btn btn-primary'>Add</Link>
                     <Link href="/AddSalaryDetails" id='AddButton' className='btn btn-primary'>Add</Link>
                 </div>
                 <div className='col-lg-2 mt-2'>

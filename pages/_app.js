@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }) {
         <div className='row'>
           <Header />
         </div>
+        <br/><br/>
         <div className='row'>
           <div className='col-2'>
             <Sidebar />

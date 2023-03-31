@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import Link from 'next/link'
 function GroupMasterForm() {
   return (
     <div>
@@ -20,7 +20,7 @@ function GroupMasterForm() {
                 <div className='row mt-5'>
                     <div className='col-lg-8'></div>
                     <div className='col-lg-2  text-end'>
-                        <button id='AddButton' className='btn btn-primary'>Cancel</button>
+                        <Link href='/GroupMaster'><button id='AddButton' className='btn btn-primary'>Cancel</button></Link>
                     </div>
                     <div className='col-lg-2 '>
                         <button id='AddButton' className='btn btn-primary'>Submit</button>
