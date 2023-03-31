@@ -93,18 +93,18 @@ function AddSalaryDetails() {
                     </div>
 
                     <div className='col-lg-4 mt-4'>
-                        <p>GOLD'S GYM DEDUCTION</p>
+                        <p>GOLDS GYM DEDUCTION</p>
                         <input type="number" placeholder='Basic Salary' className='form-control' />
                     </div>
 
 
                     <div className='col-lg-4 mt-4'>
-                        <p>GOLD'S GYM DEDUCTION StartDate</p>
+                        <p>GOLDS GYM DEDUCTION StartDate</p>
                         <input type="date" className='form-control' placeholder='Effective Date' />
                     </div>
 
                     <div className='col-lg-4 mt-4'>
-                        <p>GOLD'S GYM DEDUCTION EndDate</p>
+                        <p>GOLDS GYM DEDUCTION EndDate</p>
                         <input type="date" className='form-control' placeholder='Effective Date' />
                     </div>
 
