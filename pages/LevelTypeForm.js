@@ -1,9 +1,9 @@
 import React from 'react'
 
 function LevelTypeForm() {
-  return (
-    <div>
-        <h3 className='text-primary fs-5 mt-3'>Job Level Type Details</h3>
+    return (
+        <div>
+            <h3 className='text-primary fs-5 mt-3'>Job Level Type Details</h3>
             <div className='card p-3 border-0 shadow-lg rounded-3 mt-4'>
                 <div className='row'>
                     <div className='col-lg-2'>
@@ -12,7 +12,7 @@ function LevelTypeForm() {
                     </div>
 
                     <div className='col-lg-5'>
-                    <p>Description<i className='text-danger'>*</i></p>
+                        <p>Description<i className='text-danger'>*</i></p>
                         <textarea className='form-control' placeholder='Description'></textarea>
                     </div>
                 </div>
@@ -27,8 +27,8 @@ function LevelTypeForm() {
                     </div>
                 </div>
             </div>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default LevelTypeForm
