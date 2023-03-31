@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
-import Styles from "../styles/employmentJobHistory.module.css";
+import Styles from "../../styles/employmentJobHistory.module.css";
 import { useForm } from 'react-hook-form';
-import leaveform from '../styles/LeaveTypeForm.module.css'
+import leaveform from '../../styles/LeaveTypeForm.module.css'
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import * as Yup from 'yup';

@@ -1,5 +1,5 @@
 import React from 'react'
-import Styles from '../styles/ComponentMaster.module.css'
+import Styles from '../../styles/ComponentMaster.module.css'
 import { DownloadTableExcel } from 'react-export-table-to-excel';
 import { useRef } from 'react';
 import Link from 'next/link';
@@ -39,7 +39,7 @@ function ComponentMaster() {
 
                     </div>
                     <div className='col-lg-1'>
-                        <Link href="/ComponentMasterForm" className='btn btn-sm text-white' id={Styles.addButton}>ADD NEW</Link>
+                        <Link href="/Settings/ComponentMasterForm" className='btn btn-sm text-white' id={Styles.addButton}>ADD NEW</Link>
 
                     </div>
                 </div>

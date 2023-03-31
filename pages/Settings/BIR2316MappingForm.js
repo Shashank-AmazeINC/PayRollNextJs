@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from "../styles/BIR2316MappingForm.module.css"
+import Styles from "../../styles/BIR2316MappingForm.module.css"
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
