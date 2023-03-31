@@ -1,5 +1,5 @@
 import React from 'react'
-import Styles from '../styles/ComponentMasterForm.module.css'
+import Styles from '../../styles/ComponentMasterForm.module.css'
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';

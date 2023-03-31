@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Styles from "../styles/BIR2316MappingDash.module.css";
+import Styles from "../../styles/BIR2316MappingDash.module.css";
 import { BiFilterAlt } from "react-icons/bi";
-import table from "../styles/table.module.css";
+import table from "../../styles/table.module.css";
 import Link from "next/link";
 function BIR2316MappingDash() {
   return (
@@ -34,7 +34,7 @@ function BIR2316MappingDash() {
           </div>
           <div className="col-lg-2"></div>
           <div className="col-lg-2">
-            <Link href="/BIR2316MappingForm"><button
+            <Link href="/Settings/BIR2316MappingForm"><button
               className="btn btn-primary btn-sm  shadow-lg"
               id={Styles.addStaff}
             >

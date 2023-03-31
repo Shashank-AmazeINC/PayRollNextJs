@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from "../styles/employmentJobHistory.module.css";
+import Styles from "../../styles/employmentJobHistory.module.css";
 import Link from "next/link";
 function componentMappingDashboard(){
     // const [modalOpen, setModalOpen] = useState(false);
@@ -35,7 +35,7 @@ function componentMappingDashboard(){
               <div className="col-lg-2">
 
 
-<Link href="/ComponentMapping"><button
+<Link href="/Settings/ComponentMapping"><button
   className="btn btn-primary btn-sm shadow-lg"
   id={Styles.addNew} > ADD new</button>
   {/* // onClick={() => setModalOpen(!modalOpen)}
