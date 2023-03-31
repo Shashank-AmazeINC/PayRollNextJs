@@ -117,7 +117,7 @@ function PayrollDash() {
                 <div className="flex space-x-3 border-b">
                     <div className="row">
                         <div className="col-lg-1"></div>
-                        <div className="col-lg-2 ">                    {tabsData.map((tab, idx) => {
+                        <div className="col-lg-2 ">  {tabsData.map((tab, idx) => {
                             return (
 
                                 <button

@@ -59,7 +59,7 @@ function DepartmentMasterForm() {
                         <div className="col-lg-8"></div>
 
                         <div className="col-lg-2">
-                            <Link href="/DepartmentMasterMaster" className=" btn btn-primary form-control  shadow-lg" >Cancel</Link>
+                            <Link href="/DepartmentMasterDashboard" className=" btn btn-primary form-control  shadow-lg" >Cancel</Link>
                         </div>
                         <div className="col-lg-2">
                             <button className=" btn btn-primary form-control shadow-lg ">Submit</button>

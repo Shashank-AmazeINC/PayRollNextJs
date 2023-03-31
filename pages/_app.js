@@ -10,13 +10,14 @@ export default function App({ Component, pageProps }) {
         <div className='row'>
           <Header />
         </div>
+        <br/><br/>
         <div className='row'>
           <div className='col-2'>
             <Sidebar />
           </div>
           <div className='col-10'>
             <Component {...pageProps} />
-            <Footer/>
+           
           </div>
          
         </div>

@@ -7,9 +7,9 @@ import Clock from 'react-live-clock'
 import dynamic from 'next/dynamic'
 function Header() {
     return (
-        <div>
+        <div style={{position:"fixed"}}>
 
-            <div id={HeaderStyle.header} className='row'>
+            <div id={HeaderStyle.header} className='row' >
                 <div className='col-2'>
                     <Image
                         src={logo}
