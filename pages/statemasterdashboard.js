@@ -29,7 +29,7 @@ function StateMasterDash() {
                 </div>
                 <div className='col-lg-8'></div>
                 <div className='col-lg-2'>
-                    <Link href="/StateMasterForm" className='btn btn-primary'>Add New</Link>
+                    <Link href="/statemasterform" className='btn btn-primary'>Add New</Link>
                 </div>
             </div>
 

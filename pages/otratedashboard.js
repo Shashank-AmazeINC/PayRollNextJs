@@ -29,7 +29,7 @@ function OTRateDash() {
             <div className='row mt-3'>
                 <div className='col-lg-10'></div>
                 <div className='col-lg-2'>
-                    <button id={Styles.addButton}> <Link id={Styles.addLink} href="/OTRateForm"> <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD New</Link></button>
+                    <button id={Styles.addButton}> <Link id={Styles.addLink} href="/otrateform"> <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD New</Link></button>
                 </div>
 
             </div>

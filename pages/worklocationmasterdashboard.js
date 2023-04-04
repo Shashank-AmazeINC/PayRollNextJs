@@ -20,7 +20,7 @@ function WorkLocationMasterDash() {
             <div className='row mt-2'>
                 <div className='col-lg-10'></div>
                 <div className='col-lg-2 '>
-                    <Link href="/WorkLocationMasterForm" id='AddButton' className='btn btn-primary fw-bold'>Add New</Link>
+                    <Link href="/worklocationmasterform" id='AddButton' className='btn btn-primary fw-bold'>Add New</Link>
                 </div>
             </div>
 

@@ -34,7 +34,7 @@ function BIR2316MappingDash() {
           </div>
           <div className="col-lg-2"></div>
           <div className="col-lg-2">
-            <Link href="/Settings/BIR2316MappingForm"><button
+            <Link href="/Settings/bir2316mappingform"><button
               className="btn btn-primary btn-sm  shadow-lg"
               id={Styles.addStaff}
             >

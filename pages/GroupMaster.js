@@ -22,7 +22,7 @@ function GroupMaster() {
                 </div>
                 <div className='col-lg-8'></div>
                 <div className='col-lg-2 mt-2 text-end'>
-                    <Link href="/GroupMasterForm" id='AddButton' className='btn btn-primary'>Add New</Link>
+                    <Link href="/groupmasterform" id='AddButton' className='btn btn-primary'>Add New</Link>
                 </div>
             </div>
 

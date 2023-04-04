@@ -53,7 +53,7 @@ function CountryMasterForm() {
             <div className="row ">
               <div className="col-lg-8"></div>
               <div className="col-lg-4">
-               <Link href="/CountryMasterDash"> <button id={Styles.btn} onClick={() => reset()}>Cancel</button></Link>
+               <Link href="/countrymasterdashboard"> <button id={Styles.btn} onClick={() => reset()}>Cancel</button></Link>
                 <button id={Styles.btn} type="submit">Submit</button>
               </div>
             </div>
