@@ -52,7 +52,7 @@ function WorkLocationMasterForm(){
             <div className="row ">
               <div className="col-lg-8"></div>
               <div className="col-lg-4">
-                <Link href="/WorkLocationMasterDash"><button id={Styles.btn} onClick={() => reset()}>Cancel</button></Link>
+                <Link href="/worklocationmasterdashboard"><button id={Styles.btn} onClick={() => reset()}>Cancel</button></Link>
                 <button id={Styles.btn} type="submit">Submit</button>
               </div>
             </div>

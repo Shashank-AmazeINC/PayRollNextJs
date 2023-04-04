@@ -1,8 +1,8 @@
 import '@/styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import Sidebar from './Sidebar';
-import Footer from './Footer';
-import Header from './Header';
+import Footer from './footer';
+import Header from './header';
 export default function App({ Component, pageProps }) {
   return (
     <div>
