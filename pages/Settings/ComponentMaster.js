@@ -39,7 +39,7 @@ function ComponentMaster() {
 
                     </div>
                     <div className='col-lg-1'>
-                        <Link href="/Settings/ComponentMasterForm" className='btn btn-sm text-white' id={Styles.addButton}>ADD NEW</Link>
+                        <Link href="/Settings/componentmasterform" className='btn btn-sm text-white' id={Styles.addButton}>ADD NEW</Link>
 
                     </div>
                 </div>

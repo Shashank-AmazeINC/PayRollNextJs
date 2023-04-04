@@ -1,12 +1,12 @@
-import React from 'react'
 import Link from 'next/link'
+import React from 'react'
 
-function GroupMaster() {
+function WorkLocationMasterDash() {
     return (
         <div>
-            <h3 className='text-primary fs-5 mt-3'>Group Master</h3>
+            <h3 className='text-primary fs-5 mt-3'>Worklocation Master</h3>
             <div className='card p-3 border-0 shadow-lg rounded-3 mt-4'>
-                <div className='row p-3'>
+                <div className='row'>
                     <div className='col-lg-1'>
                         <p>Filter By</p>
                     </div>
@@ -16,20 +16,18 @@ function GroupMaster() {
                     </div>
                 </div>
             </div>
-            <div className='row mt-3'>
-                <div className='col-lg-2 text-primary fs-6 fw-bold'>
-                    <h6>SHOWING RESULTS</h6>
-                </div>
-                <div className='col-lg-8'></div>
-                <div className='col-lg-2 mt-2 text-end'>
-                    <Link href="/groupmasterform" id='AddButton' className='btn btn-primary'>Add New</Link>
+
+            <div className='row mt-2'>
+                <div className='col-lg-10'></div>
+                <div className='col-lg-2 '>
+                    <Link href="/worklocationmasterform" id='AddButton' className='btn btn-primary fw-bold'>Add New</Link>
                 </div>
             </div>
 
             <table className='table table-hover mt-4 '>
                 <thead className='bg-info text-white '>
                     <tr>
-                        <th>Short</th>
+                        <th>Short Name</th>
                         <th>Description</th>
                         <th>Actions</th>
                     </tr>
@@ -39,4 +37,4 @@ function GroupMaster() {
     )
 }
 
-export default GroupMaster
+export default WorkLocationMasterDash

@@ -29,9 +29,20 @@ function StateMasterDash() {
                 </div>
                 <div className='col-lg-8'></div>
                 <div className='col-lg-2'>
-                    <Link href="/StateMasterForm" className='btn btn-primary'>Add New</Link>
+                    <Link href="/statemasterform" className='btn btn-primary'>Add New</Link>
                 </div>
             </div>
+
+            <table className='table table-hover mt-4 '>
+                <thead className='bg-info text-white '>
+                    <tr>
+                        <th>Country</th>
+                        <th>Province Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     )
 }

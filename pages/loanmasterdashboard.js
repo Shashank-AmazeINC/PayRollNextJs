@@ -27,7 +27,7 @@ function LoanMasterDash() {
             <div className='row'>
                 <div className='col-lg-9'></div>
                 <div className='col-lg-2'>
-                    <Link href="/LoanMasterForm" id={Styles.addLink}> <button className='mt-3' id={Styles.addButton}>   <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD </button> </Link>
+                    <Link href="/loanmasterform" id={Styles.addLink}> <button className='mt-3' id={Styles.addButton}>   <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD </button> </Link>
                 </div>
                 <div className='col-lg-1'></div>
             </div>

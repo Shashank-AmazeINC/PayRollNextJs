@@ -33,7 +33,7 @@ function DivisionMasterDashboard(){
           </div>
           <div className="col-lg-2"></div>
           <div className="col-lg-2">
-           <Link href="/DivDivisionMaster"> <button
+           <Link href="/divdivisionmaster"> <button
               className="btn btn-primary btn-sm  shadow-lg"
               id={Styles.addNew}
             > <AiOutlinePlusCircle /> 

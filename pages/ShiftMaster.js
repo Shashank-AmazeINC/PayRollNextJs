@@ -33,7 +33,7 @@ function ShiftMaster(){
             <div className="col-lg-2">
 
 
-<Link href="/ShiftMasterForm"><button
+<Link href="/shiftmasterform"><button
 className="btn btn-primary btn-sm shadow-lg"
 id={Styles.addNew}>Add New
 </button></Link>

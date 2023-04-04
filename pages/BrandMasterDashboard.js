@@ -28,7 +28,7 @@ function BrandMasterDashboard() {
                             <div className="col-md-10">
                             </div>
                             <div className="col-md-2">
-                                <button routerlink="/HR/BrandMasterForm" className={brandmaster.button} tabindex="0">
+                                <button routerlink="/HR/brandmasterform" className={brandmaster.button} tabindex="0">
                                     Add New</button>
                             </div>
                         </div>
