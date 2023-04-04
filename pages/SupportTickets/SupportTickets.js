@@ -67,7 +67,7 @@ function SupportTickets() {
                     <div className='col-lg-2'>
                         <button id={Styles.SaveButton}>Save</button></div>
                     <div className='col-lg-2'>
-                        <Link href='SupportTickets/SupportTicketDashboard' > <button id={Styles.CancelButton}>Cancel</button></Link>
+                        <Link href='SupportTickets/supportticketdashboard' > <button id={Styles.CancelButton}>Cancel</button></Link>
                     </div>
                 </div>
 

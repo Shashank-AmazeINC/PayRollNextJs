@@ -100,7 +100,7 @@ Swal.mixin({
                         <div className="col-lg-8">
                         </div>
                         <div className="col-lg-2">
-                            <Link href="/BarangayMasterDash"><button className={Barangay.button}>CANCEL</button></Link>
+                            <Link href="/barangaymasterdashboard"><button className={Barangay.button}>CANCEL</button></Link>
                         </div>
                         <div className="col-lg-2">
                         

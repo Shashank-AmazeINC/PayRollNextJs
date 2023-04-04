@@ -43,7 +43,7 @@ function Company() {
                                             </td>
                                             <td clasName={table.tabledetail}>Purego.ph</td>
                                             <td clasName={table.tabledetail}>884234924</td>
-                                            <td><Link href="/CompanyProfile"><button className="edit-btn">Edit</button></Link><br /><br /><button className="edit-btn">Delete
+                                            <td><Link href="/companyprofile"><button className="edit-btn">Edit</button></Link><br /><br /><button className="edit-btn">Delete
                                             </button>
                                             </td>
                                         </tr>

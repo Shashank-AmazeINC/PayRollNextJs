@@ -21,7 +21,7 @@ function SemiTaxConfigaration() {
             <div className='row'>
                 <div className='col-lg-10'></div>
                 <div className='col-lg-2 mt-2 text-end'>
-                    <Link href="/SemiTaxForm" className='btn btn-primary'>Add New</Link>
+                    <Link href="/semitaxform" className='btn btn-primary'>Add New</Link>
                 </div>
 
                 <table className='table table-hover mt-2 '>

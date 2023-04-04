@@ -7,7 +7,7 @@ function MyTeamAttendence() {
             <div className='container'>
                 <div className='row mt-3'>
                     <div className='col-lg-3 text-end'>
-                        <Link className='Heading active' href="/Attendence/AttendenceDetails">My Attendence Details</Link>
+                        <Link className='Heading active' href="/Attendence/attendencedetails">My Attendence Details</Link>
                     </div>
                 </div>
 
