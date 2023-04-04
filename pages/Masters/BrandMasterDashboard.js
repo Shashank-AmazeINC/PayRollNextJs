@@ -29,13 +29,8 @@ function BrandMasterDashboard() {
                             <div className="col-md-10">
                             </div>
                             <div className="col-md-2">
-<<<<<<< HEAD:pages/BrandMasterDashboard.js
-                                <button routerlink="/HR/brandmasterform" className={brandmaster.button} tabindex="0">
-                                    Add New</button>
-=======
                                 <Link href="/Masters/BrandMasterForm"><button className={brandmaster.button} tabindex="0">
                                     Add New</button></Link>
->>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/BrandMasterDashboard.js
                             </div>
                         </div>
                         <br />

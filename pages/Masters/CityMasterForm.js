@@ -34,11 +34,7 @@ function CityMasterForm() {
                 <div className='row mt-5'>
                     <div className='col-lg-8'></div>
                     <div className='col-lg-2  text-end'>
-<<<<<<< HEAD:pages/CityMasterForm.js
-                       <Link href="/citymasterdashboard"> <button id='AddButton' className='btn btn-primary'>Cancel</button></Link>
-=======
                        <Link href="/Masters/CityMasterDash"> <button id='AddButton' className='btn btn-primary'>Cancel</button></Link>
->>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/CityMasterForm.js
                     </div>
                     <div className='col-lg-2 '>
                         <button id='AddButton' className='btn btn-primary'>Submit</button>

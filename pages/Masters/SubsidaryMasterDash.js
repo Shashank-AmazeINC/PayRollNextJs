@@ -25,11 +25,9 @@ function SubsidaryMasterDash() {
             <div className='row mt-3'>
                 <div className='col-lg-9'></div>
                 <div className='col-lg-2'>
-<<<<<<<< HEAD:pages/subsidarymasterdashboard.js
-                    <button id={Styles.addButton}> <Link id={Styles.addLink} href="/subsidarymasterform"> <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD New</Link></button>
-========
+
                     <button id={Styles.addButton}> <Link id={Styles.addLink} href="/Masters/SubsidaryMasterForm"> <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD New</Link></button>
->>>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/SubsidaryMasterDash.js
+
                 </div>
                 <div className='col-lg-1'></div>
 

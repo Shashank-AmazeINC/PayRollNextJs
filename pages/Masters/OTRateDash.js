@@ -29,11 +29,9 @@ function OTRateDash() {
             <div className='row mt-3'>
                 <div className='col-lg-10'></div>
                 <div className='col-lg-2'>
-<<<<<<<< HEAD:pages/otratedashboard.js
-                    <button id={Styles.addButton}> <Link id={Styles.addLink} href="/otrateform"> <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD New</Link></button>
-========
+
                     <button id={Styles.addButton}> <Link id={Styles.addLink} href="/Masters/otMaster"> <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD New</Link></button>
->>>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/OTRateDash.js
+
                 </div>
 
             </div>

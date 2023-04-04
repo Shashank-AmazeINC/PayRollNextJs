@@ -52,11 +52,7 @@ function LevelTypeForm(){
             <div className="row ">
               <div className="col-lg-8"></div>
               <div className="col-lg-4">
-<<<<<<< HEAD:pages/LevelTypeForm.js
-               <Link href="/leveltypedashboard"> <button id={Styles.btn} onClick={() => reset()}>Cancel</button></Link>
-=======
                <Link href="/Masters/LevelTypeDash"> <button id={Styles.btn} onClick={() => reset()}>Cancel</button></Link>
->>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/LevelTypeForm.js
                 <button id={Styles.btn} type="submit">Submit</button>
               </div>
             </div>

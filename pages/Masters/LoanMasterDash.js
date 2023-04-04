@@ -27,11 +27,9 @@ function LoanMasterDash() {
             <div className='row'>
                 <div className='col-lg-9'></div>
                 <div className='col-lg-2'>
-<<<<<<<< HEAD:pages/loanmasterdashboard.js
-                    <Link href="/loanmasterform" id={Styles.addLink}> <button className='mt-3' id={Styles.addButton}>   <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD </button> </Link>
-========
+
                     <Link href="/Masters/LoanMasterForm" id={Styles.addLink}> <button className='mt-3' id={Styles.addButton}>   <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD </button> </Link>
->>>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/LoanMasterDash.js
+
                 </div>
                 <div className='col-lg-1'></div>
             </div>

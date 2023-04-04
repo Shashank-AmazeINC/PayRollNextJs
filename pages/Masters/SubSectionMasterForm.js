@@ -71,11 +71,7 @@ function SubSectionMasterForm() {
                                 <div className="col-lg-7">
                                 </div>
                                 <div className="col-lg-2">
-<<<<<<< HEAD:pages/SubSectionMasterForm.js
-                                   <Link href="/subsectionmaster"> <button  className={subsectionform.button} >CANCEL</button></Link>
-=======
                                    <Link href="/Masters/SubSectionMaster"> <button  className={subsectionform.button} >CANCEL</button></Link>
->>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/SubSectionMasterForm.js
                                 </div>
                                 <div className="col-lg-2">
                                     <button className={subsectionform.button}>SUBMIT</button>

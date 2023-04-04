@@ -29,11 +29,11 @@ function StateMasterDash() {
                 </div>
                 <div className='col-lg-8'></div>
                 <div className='col-lg-2'>
-<<<<<<<< HEAD:pages/statemasterdashboard.js
-                    <Link href="/statemasterform" className='btn btn-primary'>Add New</Link>
-========
+
+                    {/* <Link href="/statemasterform" className='btn btn-primary'>Add New</Link> */}
+
                     <Link href="/Masters/StateMasterForm" className='btn btn-primary'>Add New</Link>
->>>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/StateMasterDash.js
+
                 </div>
             </div>
 

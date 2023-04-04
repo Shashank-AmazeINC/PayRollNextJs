@@ -72,11 +72,7 @@ function DivDivisionMaster() {
                                 <div className="col-lg-7">
                                 </div>
                                 <div className="col-lg-2">
-<<<<<<< HEAD:pages/DivDivisionMaster.js
-                                    <Link href="/divisionmasterdashboard"><button  id={Styles.addNew}  style={{color:'white'}} tabindex="0">CANCEL</button></Link>
-=======
                                     <Link href="/Masters/DivisionMasterDashboard"><button  id={Styles.addNew}  style={{color:'white'}} tabindex="0">CANCEL</button></Link>
->>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/DivDivisionMaster.js
                                 </div>
                                 <div className="col-lg-2">
                                     <button id={Styles.addNew}  style={{color:'white'}}>SUBMIT</button>

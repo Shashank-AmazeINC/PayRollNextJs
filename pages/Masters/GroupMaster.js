@@ -22,11 +22,7 @@ function GroupMaster() {
                 </div>
                 <div className='col-lg-8'></div>
                 <div className='col-lg-2 mt-2 text-end'>
-<<<<<<< HEAD:pages/GroupMaster.js
-                    <Link href="/groupmasterform" id='AddButton' className='btn btn-primary'>Add New</Link>
-=======
                     <Link href="/Masters/GroupMasterForm" id='AddButton' className='btn btn-primary'>Add New</Link>
->>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/GroupMaster.js
                 </div>
             </div>
 

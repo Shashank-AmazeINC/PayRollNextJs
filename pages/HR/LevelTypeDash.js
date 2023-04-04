@@ -26,11 +26,9 @@ function LevelTypeDash() {
                 </div>
                 <div className='col-lg-8'></div>
                 <div className='col-lg-2 mt-2 text-end'>
-<<<<<<<< HEAD:pages/leveltypedashboard.js
-                    <Link href="/leveltypeform" id='AddButton' className='btn btn-primary'>Add New</Link>
-========
+
                     <Link href="/Masters/LevelTypeForm" id='AddButton' className='btn btn-primary'>Add New</Link>
->>>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/HR/LevelTypeDash.js
+
                 </div>
 
                 <table className='table table-hover mt-4 '>

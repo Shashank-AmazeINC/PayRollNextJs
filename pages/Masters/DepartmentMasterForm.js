@@ -59,11 +59,7 @@ function DepartmentMasterForm() {
                         <div className="col-lg-8"></div>
 
                         <div className="col-lg-2">
-<<<<<<< HEAD:pages/DepartmentMasterForm.js
-                            <Link href="/departmentmasterdashboard" className=" btn btn-primary form-control  shadow-lg" >Cancel</Link>
-=======
                             <Link href="/Masters/DepartmentMasterDashboard" className=" btn btn-primary form-control  shadow-lg" >Cancel</Link>
->>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/DepartmentMasterForm.js
                         </div>
                         <div className="col-lg-2">
                             <button className=" btn btn-primary form-control shadow-lg ">Submit</button>

@@ -33,11 +33,7 @@ function DepartmentMasterDashboard(){
             <div className="col-lg-2">
 
 
-<<<<<<< HEAD:pages/DepartmentMasterDashboard.js
-<Link href="/departmentmasterform"><button
-=======
 <Link href="/Masters/DepartmentMasterForm"><button
->>>>>>> 1b7d84981ed877a93a006967ddc919860d7ce983:pages/Masters/DepartmentMasterDashboard.js
 className="btn btn-primary btn-sm shadow-lg"
 id={Styles.addNew}
 onClick={() => setModalOpen(!modalOpen)}
