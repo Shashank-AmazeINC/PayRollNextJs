@@ -4,7 +4,9 @@ import Sidebar from './Sidebar';
 import Footer from './footer';
 import Header from './header';
 export default function App({ Component, pageProps }) {
-  return (
+  return <Component {...pageProps} />;
+}
+  /* return (
     <div>
       <div className='container-fluid'>
         <div className='row'>
@@ -24,6 +26,6 @@ export default function App({ Component, pageProps }) {
       </div>
 
 
-    </div>
-  )
-}
+    </div> */
+  // )
+// }
