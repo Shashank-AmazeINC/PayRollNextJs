@@ -45,7 +45,7 @@ function CityMasterDash()
                     </span>RESULTS</p>
                 </div>
                 <div className="col-md-2">
-                    <Link href="/Masters/CityMasterForm"><button className={citymaster.button} tabindex="0">
+                    <Link href="/Masters/citymasterform"><button className={citymaster.button} tabindex="0">
                         Add New</button></Link>
                 </div>
             </div>

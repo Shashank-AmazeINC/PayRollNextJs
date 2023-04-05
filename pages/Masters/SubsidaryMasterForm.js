@@ -68,7 +68,7 @@ function SubsidaryMasterForm() {
                         <div className="col-lg-7">
                         </div>
                         <div className="col-lg-2">
-                           <Link href="/Masters/SubsidaryMasterDash"> <button className={subsidaryform.button}>CANCEL</button></Link>
+                           <Link href="/Masters/subsidarymasterdashboard"> <button className={subsidaryform.button}>CANCEL</button></Link>
                         </div>
                         <div className="col-lg-2"><button className={subsidaryform.button}>SUBMIT</button>
                         </div>

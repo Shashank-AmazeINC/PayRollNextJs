@@ -21,7 +21,7 @@ function sss() {
                 <div className='col-lg-11'></div>
                 <div className='col-lg-1'>
 
-                    <Link href="/sssconfigadd" id={Styles.addLink} >  <button id={Styles.addButton}>  ADD </button></Link>
+                    <Link href="/configuration/sssconfigadd" id={Styles.addLink} >  <button id={Styles.addButton}>  ADD </button></Link>
 
                 </div>
 

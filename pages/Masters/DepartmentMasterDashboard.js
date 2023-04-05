@@ -33,7 +33,7 @@ function DepartmentMasterDashboard(){
             <div className="col-lg-2">
 
 
-<Link href="/Masters/DepartmentMasterForm"><button
+<Link href="/Masters/departmentmasterform"><button
 className="btn btn-primary btn-sm shadow-lg"
 id={Styles.addNew}
 onClick={() => setModalOpen(!modalOpen)}

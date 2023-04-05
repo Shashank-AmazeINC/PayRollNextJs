@@ -37,7 +37,7 @@ function pagibigadd() {
             <br />
             <p id={Styles.p}>Phihealth Configuration Form</p>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div id={Styles.card} className='card shadow-lg p-3'>
+                <div className={'card shadow-lg p-3 ' + Styles.card}>
 
                     <div className='row'>
                         <div className='col-lg-3'>

@@ -26,7 +26,7 @@ function SubsidaryMasterDash() {
                 <div className='col-lg-9'></div>
                 <div className='col-lg-2'>
 
-                    <button id={Styles.addButton}> <Link id={Styles.addLink} href="/Masters/SubsidaryMasterForm"> <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD New</Link></button>
+                    <button id={Styles.addButton}> <Link id={Styles.addLink} href="/Masters/subsidarymasterform"> <AiOutlinePlusCircle id={Styles.icon} size={18} /> ADD New</Link></button>
 
                 </div>
                 <div className='col-lg-1'></div>

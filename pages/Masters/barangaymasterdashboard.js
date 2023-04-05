@@ -28,7 +28,7 @@ function BarangayMasterDash() {
             <div className='row mt-3'>
                 <div className='col-lg-9'></div>
                 <div className='col-lg-2'>
-                    <button id={Styles.addButton} >  <Link href="/Masters/BarangayMasterForm" id={Styles.addLink}> <AiOutlinePlusCircle size={15} /> ADD NEW</Link></button>
+                    <button id={Styles.addButton} >  <Link href="/Masters/barangaymasterform" id={Styles.addLink}> <AiOutlinePlusCircle size={15} /> ADD NEW</Link></button>
 
                 </div>
                 <div className='col-lg-1'></div>

@@ -34,7 +34,7 @@ function CountryMasterDash() {
           </div>
           <div className="col-lg-2"></div>
           <div className="col-lg-2">
-            <Link href="/Masters/CountryMasterForm"><button
+            <Link href="/Masters/countrymasterform"><button
               className="btn btn-primary btn-sm  shadow-lg"
               id={Styles.addNew}
             > <AiOutlinePlusCircle /> 

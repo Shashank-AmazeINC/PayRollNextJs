@@ -24,7 +24,7 @@ function SubSectionMaster() {
             <div className='row mt-3'>
                 <div className='col-lg-7'></div>
                 <div className='col-lg-4'>
-                    <Link className='btn btn-primary btn-sm ' id={Styles.addButton} href="/Masters/SubSectionMasterForm"> <AiOutlinePlusCircle size={18} /> ADD NEW  </Link>
+                    <Link className='btn btn-primary btn-sm ' id={Styles.addButton} href="/Masters/subsectionmasterform"> <AiOutlinePlusCircle size={18} /> ADD NEW  </Link>
                 </div>
             </div>
             <br />

@@ -29,7 +29,7 @@ function BrandMasterDashboard() {
                             <div className="col-md-10">
                             </div>
                             <div className="col-md-2">
-                                <Link href="/Masters/BrandMasterForm"><button className={brandmaster.button} tabindex="0">
+                                <Link href="/Masters/brandmasterform"><button className={brandmaster.button} tabindex="0">
                                     Add New</button></Link>
                             </div>
                         </div>

@@ -20,7 +20,7 @@ function Philhealth() {
             <div className='row mt-3'>
                 <div className='col-lg-11'></div>
                 <div className='col-lg-1'>
-                    <Link href="/Philhealthadd" id={Styles.addLink} >  <button id={Styles.addButton}>  ADD </button></Link>
+                    <Link href="/configuration/philhealthadd" id={Styles.addLink} >  <button id={Styles.addButton}>  ADD </button></Link>
 
                 </div>
 

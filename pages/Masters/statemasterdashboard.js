@@ -32,7 +32,7 @@ function StateMasterDash() {
 
                     {/* <Link href="/statemasterform" className='btn btn-primary'>Add New</Link> */}
 
-                    <Link href="/Masters/StateMasterForm" className='btn btn-primary'>Add New</Link>
+                    <Link href="/Masters/statemasterform" className='btn btn-primary'>Add New</Link>
 
                 </div>
             </div>

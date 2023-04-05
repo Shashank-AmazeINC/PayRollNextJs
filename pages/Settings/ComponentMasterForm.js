@@ -64,7 +64,7 @@ function ComponentMasterForm() {
                             <button id={Styles.saveButton} className=" btn btn-primary btn-sm form-control shadow-lg ">Save</button>
                         </div>
                         <div className="col-lg-2">
-                            <Link href="/ComponentMaster"><button id={Styles.cancelButton} className=" btn btn-primary btn-sm form-control shadow-lg">Cancel</button></Link>
+                            <Link href=""><button id={Styles.cancelButton} className=" btn btn-primary btn-sm form-control shadow-lg">Cancel</button></Link>
                         </div>
                     </div>
                 </div>
