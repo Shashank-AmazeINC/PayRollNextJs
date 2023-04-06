@@ -17,7 +17,7 @@ import digiLogo from "../public/DigiLogo.png";
 
 const { Option } = Select;
 
-const LoginForm = () => {
+const LoginForm = ({makelogin}) => {
     const [passwordShown, setPasswordShown] = useState("");
     const positions = [
       { id: 1, short: "Manager" },
@@ -44,6 +44,7 @@ const LoginForm = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
   const onSubmit = (values) => {
+    makelogin();
     console.log("Received values of form: ", values);
   };
 
@@ -59,7 +60,7 @@ const LoginForm = () => {
       <Col span={12}>
         <Row>
           <Col span={12} className={styles.logincard}>
-            <Form onSubmit={onSubmit}>
+            <Form onSubmit={handleSubmit(onSubmit)}>
               <Image src={digiLogo} alt="digiLogo" width={250} />
               <Form.Item>
                 <Select className="form-select">
