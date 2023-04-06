@@ -40,8 +40,8 @@ export default function Layout({ children, home }) {
     function login() {
         setILogin("yes");
         sessionStorage.setItem("isLogin", "yes");
-        setusernameName(sessionStorage.getItem("userName"));
-        location.href = "/masters/dashboard";
+        // setusernameName(sessionStorage.getItem("userName"));
+        location.href = "/Home/Dashboard";
     }
 
     function logout() {
@@ -59,9 +59,6 @@ export default function Layout({ children, home }) {
     if (isLogin == "yes") {
         return (
             <div className={styles.divNegate}>
-                <Head>
-                    <title>Next Js Quoting Tool</title>
-                </Head>
                 <div className='row'>
                     <div className='col-lg-2'>
                         <Sidebar applyPageName={changePageName}></Sidebar>

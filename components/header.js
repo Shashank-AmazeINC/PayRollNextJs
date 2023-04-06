@@ -5,8 +5,19 @@ import bell from '../public/notification.png'
 import HeaderStyle from '../styles/Header.module.css'
 import Clock from 'react-live-clock'
 import dynamic from 'next/dynamic'
-function Header() {
+function Header({makelogout, pageName, userName}) {
     return (
+        <>
+        <div className="row" style={{ height: '10vh', overflowY: 'auto', }}>
+             <div className={'col-lg-10 ' + styles.headermenu} style={{ paddingLeft: '3%' }}>
+                 <h5><b>{pageName}</b></h5>
+                 <span style={{ color: '#3247d5', fontWeight: '500' }}>Welcome back, {userName}</span>
+            </div>
+            <div className={'col-lg-2 ' + styles.headermenu}>
+                 {/* <button type='button' onClick={makelogout} style={{ margin: '20px', float: 'right' }}>Logout</button> */}
+                <BiLogOut onClick={makelogout} style={{ margin: '20px', float: 'right', fontSize: '40px' }} title='Logout'></BiLogOut>
+            </div>
+        </div>
         <div style={{position:"fixed"}}>
 
             <div id={HeaderStyle.header} className='row' >
@@ -40,6 +51,7 @@ function Header() {
                 </div>
             </div>
         </div>
+        </>
 
     )
 }
